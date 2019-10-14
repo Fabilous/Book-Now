@@ -1,0 +1,438 @@
+.container{
+	max-width:768px;
+}
+
+/****** SELECT 2 *****/
+
+.select2-container{
+	height:44px;
+	
+        .select2-selection--single{
+            border:none;
+                .select2-selection__arrow{
+                    height:44px;
+                    b{
+                    	border-width: 8px 6px 0 6px;
+                    	margin-left:-16px;
+                    }
+                }
+                .select2-selection__rendered{
+                    border:1px solid $less-bright-grey;
+                    background-color:$bright-grey;
+                    line-height:44px;
+                    font-size:1rem;
+                    border-radius:4px;
+                    padding:0 1rem;
+                }
+            }
+            
+            .select2-selection--multiple{
+            border:none;
+            height:44px;
+            border:none !important;
+                .select2-selection__arrow{
+                    height:44px;
+                    b{
+                        border-width: 8px 6px 0 6px;
+                        margin-left:-16px;
+                    }
+                }
+                .select2-selection__rendered{
+                    border:1px solid $less-bright-grey;
+                    background-color:$bright-grey;
+                    line-height:44px;
+                    font-size:1rem;
+                    border-radius:4px;
+                    padding:0 1rem;
+                }
+                .select2-selection__choice{
+                    margin-top:8px;
+                    line-height:30px;
+                    padding:0 8px;
+                    background-color:$blue;
+                    color:white;
+                    .select2-selection__choice__remove{
+                        margin-right:8px;
+                        color:white;
+                    }
+                }
+            }
+            
+    &.select2-container--default{
+    	.select2-results>.select2-results__options{
+    		background-color:$bright-grey;
+    	}
+    	.select2-results__option--highlighted[aria-selected]{
+    		background-color:$blue !important;
+    	}
+    	.select2-results__option[aria-selected=true]{
+    		background-color:$less-bright-grey;
+    	}
+        .select2-results__option[aria-disabled=true]{
+            color:#bbb;
+        }
+    }
+            
+}
+
+.select2-dropdown{
+	&.select2-dropdown--below{
+		margin-top:2px;
+	}
+		
+} 
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+	    border-width: 0 6px 8px 6px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color:$blue;
+}
+
+
+/****/
+
+.language-selector-for-dates{
+    .btn-secondary{
+        background-color:$less-bright-grey;
+        border-color:$less-bright-grey;
+        color:$middle-grey;
+        cursor:pointer;
+        &.active{
+            background-color:$bright-grey;
+            color:$text-grey;
+                box-shadow: 0 0 8px #cdcdcd;
+        }
+    }
+}
+
+#continue{
+    .modal-body{
+        p{
+            span{
+                display:block;
+            }
+        }
+    }
+}
+
+
+
+/******************/
+
+
+#recap{
+	.inner{
+		padding:0.5rem;
+		border:2px dotted $less-bright-grey;
+		p{
+			font-size:0.875rem;
+			line-height:1rem;
+			margin-bottom:0.20rem;
+			&.recap-selection{
+				font-weight:700;
+				a{
+					font-weight:400;
+					color:$text-grey;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/*********************/
+
+#bottom-fixed{
+    width:100%;
+    position:fixed;
+    bottom:0px; 
+}
+
+#price-box{
+    width:100%;
+    display:block;
+    color:white;
+    padding:0.725rem 0;
+    .label{
+        display:block;
+        padding-top:0.5rem;
+        font-weight:600;
+    }
+    .price{
+        font-size:1.5rem;
+        font-weight:600;
+    }
+    .main-price{
+        margin-bottom:0.5rem;
+    }
+    .secondary-price{
+        .label{
+            padding-top:0;
+            font-size:0.785rem;
+            line-height:1rem;
+            &.secondary{
+                font-weight:400;
+            }
+        }
+    }
+}
+
+#call-us{
+    width:100%;
+    display:block;
+    background-color:$green;
+    color:white;
+    padding:0.725rem 0;
+    @include transition-one();
+    &:hover,&:active,&:focus{
+        background-color:#1ac391; 
+    }
+}
+
+
+
+.modal{
+    .button.yellow{
+        width:100%;
+    }
+}
+
+.add-on-info{
+    padding:0 0 0.875rem 0;
+    span{
+        font-size:0.875rem;
+        &.add-on-label{
+            padding-bottom:0.5rem;
+            display:block;
+        }
+        &.toggle-link{
+            cursor:pointer;
+            text-decoration:underline;
+            
+        }
+    }
+    p{
+        font-size:0.875rem;
+        margin-bottom:0;
+        line-height:1.175rem;
+    }
+}
+
+/******  SWITCHES  ******/
+
+.containing-switch{
+    border-bottom:1px solid $bright-grey;
+    &.form-group{
+      margin-bottom:1.25rem;
+      padding-bottom:0.25rem;
+    }
+}
+
+
+
+
+
+/**   CSS FOR SWITCH  ****/
+
+//
+// Switches for Bootstrap 4.
+//
+// - Fully customizable with Sass variables
+// - No JavaScript required
+// - Fully accessible
+//
+
+//
+// IMPORTANT: These Sass variables are defined in Bootstrap's variables.scss. You should import that file first, then remove these.
+//
+
+$font-size-base: 1rem;
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * .875);
+$input-height: 2.375rem;
+$input-height-sm: 1.9375rem;
+$input-height-lg: 3rem;
+$input-btn-focus-width: .2rem;
+$custom-control-indicator-bg: #dee2e6;
+$custom-control-indicator-disabled-bg: #e9ecef;
+$custom-control-description-disabled-color: #868e96;
+$white: white;
+$theme-colors: (
+  'primary': $green
+);
+
+//
+// These variables can be used to customize the switch component.
+//
+$switch-height: calc(#{$input-height} * .8) !default;
+$switch-height-sm: calc(#{$input-height-sm} * .8) !default;
+$switch-height-lg: calc(#{$input-height-lg} * .8) !default;
+$switch-border-radius: $switch-height !default;
+$switch-bg: $custom-control-indicator-bg !default;
+$switch-checked-bg: map-get($theme-colors, 'primary') !default;
+$switch-disabled-bg: $custom-control-indicator-disabled-bg !default;
+$switch-disabled-color: $custom-control-description-disabled-color !default;
+$switch-thumb-bg: $white !default;
+$switch-thumb-border-radius: 50% !default;
+$switch-thumb-padding: 2px !default;
+$switch-focus-box-shadow: 0 0 0 $input-btn-focus-width rgba(map-get($theme-colors, 'primary'), .25);
+$switch-transition: .2s all !default;
+
+.switch {
+  font-size: $font-size-base;
+  position: relative;
+              &:focus{
+       outline: none;   
+        }
+  input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    background: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    padding: 0;
+        &:focus{
+       outline: none;   
+        }
+
+    + label {
+      position: relative;
+      min-width: calc(#{$switch-height} * 2);
+      border-radius: $switch-border-radius;
+      height: $switch-height;
+      line-height: $switch-height;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      vertical-align: middle;
+      text-indent: calc(calc(#{$switch-height} * 2) + .5rem);
+    }
+
+    + label::before,
+    + label::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(#{$switch-height} * 2);
+      bottom: 0;
+      display: block;
+
+    }
+
+    + label::before {
+      right: 0;
+      background-color: $switch-bg;
+      border-radius: $switch-border-radius;
+      transition: $switch-transition;
+                    &:focus{
+       outline: none;   
+        }
+    }
+
+    + label::after {
+      top: $switch-thumb-padding;
+      left: $switch-thumb-padding;
+      width: calc(#{$switch-height} - calc(#{$switch-thumb-padding} * 2));
+      height: calc(#{$switch-height} - calc(#{$switch-thumb-padding} * 2));
+      border-radius: $switch-thumb-border-radius;
+      background-color: $switch-thumb-bg;
+      transition: $switch-transition;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+    }
+
+    &:checked + label::before {
+      background-color: $switch-checked-bg;
+    }
+
+    &:checked + label::after {
+      margin-left: $switch-height;
+    }
+
+    &:focus + label::before {
+      outline: none;
+      box-shadow: $switch-focus-box-shadow;
+    }
+
+    &:disabled + label {
+      color: $switch-disabled-color;
+      cursor: not-allowed;
+    }
+
+    &:disabled + label::before {
+      background-color: $switch-disabled-bg;
+    }
+  }
+
+  // Small variation
+  &.switch-sm {
+    font-size: $font-size-sm;
+              &:focus{
+       outline: none;   
+        }
+    input {
+      + label {
+        min-width: calc(#{$switch-height-sm} * 2);
+        height: $switch-height-sm;
+        line-height: $switch-height-sm;
+        text-indent: calc(calc(#{$switch-height-sm} * 2) + .5rem);
+      }
+
+      + label::before {
+        width: calc(#{$switch-height-sm} * 2);
+                      &:focus{
+       outline: none;   
+        }
+      }
+
+      + label::after {
+        width: calc(#{$switch-height-sm} - calc(#{$switch-thumb-padding} * 2));
+        height: calc(#{$switch-height-sm} - calc(#{$switch-thumb-padding} * 2));
+      }
+
+      &:checked + label::after {
+        margin-left: $switch-height-sm;
+      }
+    }
+  }
+
+  // Large variation
+  &.switch-lg {
+    font-size: $font-size-lg;
+
+    input {
+      + label {
+        min-width: calc(#{$switch-height-lg} * 2);
+        height: $switch-height-lg;
+        line-height: $switch-height-lg;
+        text-indent: calc(calc(#{$switch-height-lg} * 2) + .5rem);
+      }
+
+      + label::before {
+        width: calc(#{$switch-height-lg} * 2);
+      }
+
+      + label::after {
+        width: calc(#{$switch-height-lg} - calc(#{$switch-thumb-padding} * 2));
+        height: calc(#{$switch-height-lg} - calc(#{$switch-thumb-padding} * 2));
+      }
+
+      &:checked + label::after {
+        margin-left: $switch-height-lg;
+      }
+    }
+  }
+
+  + .switch {
+    margin-left: 1rem;
+  }
+}
+
