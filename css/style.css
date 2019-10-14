@@ -338,7 +338,9 @@ MODALS
 
 .button {
   display: block;
-  line-height: 3rem;
+  line-height: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   width: 100%;
   border-radius: 8px;
   /*box-shadow:0 4px 10px rgba(0,2,4,0.28);*/
@@ -346,8 +348,7 @@ MODALS
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-align: center;
-  vertical-align: middle; }
+  text-align: center; }
   .button:hover, .button:active, .button:focus {
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
@@ -356,6 +357,11 @@ MODALS
     color: white; }
     .button.red-full:hover, .button.red-full:active, .button.red-full:focus {
       background: #dd2727; }
+  .button.blue-full {
+    background: #063456;
+    color: white; }
+    .button.blue-full:hover, .button.blue-full:active, .button.blue-full:focus {
+      opacity: 0.85; }
   .button.green {
     background: #16A57B;
     color: white; }
@@ -363,7 +369,6 @@ MODALS
       background: #128765;
       opacity: 0.85; }
   .button.red-empty {
-    line-height: 2.75rem;
     background: transparent;
     color: #E24444;
     border: 2px solid #E24444;
@@ -373,15 +378,41 @@ MODALS
       color: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border-color: #E24444; }
+  .button.blue-empty {
+    background: transparent;
+    color: #063456;
+    border: 2px solid #063456;
+    box-shadow: none; }
+    .button.blue-empty:hover, .button.blue-empty:active, .button.blue-empty:focus {
+      background: #063456;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-color: #063456; }
+  .button.white-empty {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: none; }
+    .button.white-empty:hover, .button.white-empty:active, .button.white-empty:focus {
+      background: white;
+      color: #373636;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-color: white; }
   .button.yellow {
     background: #FFCD00;
-    color: #373636;
     /*box-shadow:0 2px 4px rgba(0,0,0,0.2);*/
     font-weight: 700;
     color: #55565A;
     /*box-shadow:0 2px 8px rgba(62,57,57,0.22);*/ }
     .button.yellow:hover, .button.yellow:active, .button.yellow:focus {
       background-color: #ffd733;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22); }
+  .button.white-full {
+    background: white;
+    color: #063456;
+    font-weight: 700; }
+    .button.white-full:hover, .button.white-full:active, .button.white-full:focus {
+      background-color: #f7f7f7;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22); }
 
 .blue-background .button.yellow {
