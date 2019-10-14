@@ -224,8 +224,6 @@ ul.checklist{
     }
 }
 
-
-// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
     .alertbox{
         padding:1.5rem 1.5rem 1rem 1.5rem;
@@ -238,6 +236,15 @@ ul.checklist{
 /*******
 UTILITIES
 ********/
+a.noredlink{
+    color:$text-grey;
+    text-decoration:underline;
+    &::after{
+        background:none;
+        display:none;
+    }
+}
+
 .spacer{
 	display:block;
 	padding-bottom:2rem;

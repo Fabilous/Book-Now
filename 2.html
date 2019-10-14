@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>2 - Destination Selection</title>
+    <title>2 - Language, Destination and Date Selection</title>
     <meta name="description" content="LOAP is COOL">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -70,7 +70,7 @@
             
               <p class="recap-label">Your Selection</p>
               
-              <p class="recap-selection">International Bartender Course - English or Italian <a href="1.html">(change)</a></p>
+              <p class="recap-selection">International Bartender Course <a href="1.html">(change)</a></p>
               
             </div>
             
@@ -87,32 +87,55 @@
   
       <!-- form start -->
 <form>
-  <div class="form-group">
-    <select class="select-type-one form-control" name="date-selection" style="width:100%">
-<option>Amsterdam (EN)</option>
-<option>Bad Gastein (EN)</option>
-<option>Barcelona (EN - IT)</option>
-<option disabled>Berlin</option>
-<option>Cape town (EN)</option>
-<option>Dublín (EN - IT)</option>
-<option disabled>Jalisco</option>
-<option>Kos (EN - IT)</option>
-<option>London (EN)</option>
-<option>Madrid (EN)</option>
-<option>Mallorca (EN)</option>
-<option>Miami (EN)</option>
-<option>Milan (EN - IT)</option>
-<option>New York (EN)</option>
-<option disabled>Oslo</option>
-<option>Paris (EN)</option>
-<option>Phuket (EN - IT)</option>
-<option>Rome (EN - IT)</option>
-<option disabled>Speyside</option>
-<option disabled>Stockholm</option>
-<option>Sydney (EN)</option>
-    </select>
-  </div>
-                        
+<div class="row no-gutters two-selectors">
+
+  <div class="col-6">
+    <div class="form-group">
+        <label for="language-selection"><strong>Course language</strong></label>
+        <select class="select-type-one form-control" name="language-selection" style="width:100%">
+          <option value="1">English</option>
+          <option value="2">Danish</option>
+          <option value="3">Finnish</option>
+          <option value="4">French</option>
+          <option value="5">German</option>
+          <option value="6">Italian</option>
+          <option value="7">Spanish</option>
+          <option value="8">Swedish</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="form-group">
+          <label for="date-selection"><strong>Destination</strong></label>
+        <select class="select-type-one form-control" name="date-selection" style="width:100%">
+          <option>Amsterdam</option>
+          <option>Bad Gastein</option>
+          <option>Barcelona</option>
+          <option disabled>Berlin</option>
+          <option>Cape town</option>
+          <option>Dublín</option>
+          <option disabled>Jalisco</option>
+          <option>Kos</option>
+          <option>London</option>
+          <option>Madrid</option>
+          <option>Mallorca</option>
+          <option>Miami</option>
+          <option>Milan</option>
+          <option>New York</option>
+          <option disabled>Oslo</option>
+          <option>Paris</option>
+          <option>Phuket</option>
+          <option>Rome</option>
+          <option disabled>Speyside</option>
+          <option disabled>Stockholm</option>
+          <option>Sydney</option>
+        </select>
+      </div>
+    </div>
+
+
+</div>             
 </form>
 
 
@@ -171,6 +194,14 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     $(document).ready(function() {
         $('.select-type-one').select2({
           minimumResultsForSearch: Infinity
+          });
+    });
+
+    // Select Type 2      
+             $(document).ready(function() {
+        $('.select-type-two').select2({
+          minimumResultsForSearch: Infinity,
+          maximumSelectionLength: 2
           });
     });
       </script>

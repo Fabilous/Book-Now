@@ -20,7 +20,7 @@
                     border:1px solid $less-bright-grey;
                     background-color:$bright-grey;
                     line-height:44px;
-                    font-size:1rem;
+                    font-size:0.9rem;
                     border-radius:4px;
                     padding:0 1rem;
                 }
@@ -40,7 +40,7 @@
                 .select2-selection__rendered{
                     border:1px solid $less-bright-grey;
                     background-color:$bright-grey;
-                    line-height:44px;
+                    line-height:39px;
                     font-size:1rem;
                     border-radius:4px;
                     padding:0 1rem;
@@ -91,35 +91,8 @@
 }
 
 
-/****/
 
-.language-selector-for-dates{
-    .btn-secondary{
-        background-color:$less-bright-grey;
-        border-color:$less-bright-grey;
-        color:$middle-grey;
-        cursor:pointer;
-        &.active{
-            background-color:$bright-grey;
-            color:$text-grey;
-                box-shadow: 0 0 8px #cdcdcd;
-        }
-    }
-}
-
-#continue{
-    .modal-body{
-        p{
-            span{
-                display:block;
-            }
-        }
-    }
-}
-
-
-
-/******************/
+/********* RECURRENT COMPONENTS *********/
 
 
 #recap{
@@ -134,51 +107,31 @@
 				font-weight:700;
 				a{
 					font-weight:400;
-					color:$text-grey;
+          color:$text-grey;
 				}
 			}
 		}
 	}
 }
 
+/****/
 
-
+#modal-continue{
+    .modal-body{
+        p{
+            span{
+                display:block;
+            }
+        }
+    }
+}
 
 /*********************/
 
 #bottom-fixed{
-    width:100%;
-    position:fixed;
-    bottom:0px; 
-}
-
-#price-box{
-    width:100%;
-    display:block;
-    color:white;
-    padding:0.725rem 0;
-    .label{
-        display:block;
-        padding-top:0.5rem;
-        font-weight:600;
-    }
-    .price{
-        font-size:1.5rem;
-        font-weight:600;
-    }
-    .main-price{
-        margin-bottom:0.5rem;
-    }
-    .secondary-price{
-        .label{
-            padding-top:0;
-            font-size:0.785rem;
-            line-height:1rem;
-            &.secondary{
-                font-weight:400;
-            }
-        }
-    }
+  width:100%;
+  position:fixed;
+  bottom:0px; 
 }
 
 #call-us{
@@ -193,13 +146,27 @@
     }
 }
 
-
-
 .modal{
     .button.yellow{
         width:100%;
     }
 }
+
+
+/******  SECOND STEP  ******/
+
+.no-gutters.two-selectors{
+  .col-6{
+      &:first-child{
+        padding-right:5px;
+      }
+      &:last-child{
+        padding-left:5px;
+      }
+  }
+}
+
+/******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 
 .add-on-info{
     padding:0 0 0.875rem 0;
@@ -222,6 +189,37 @@
     }
 }
 
+#price-box{
+  width:100%;
+  display:block;
+  color:white;
+  padding:0.725rem 0;
+  .label{
+      display:block;
+      padding-top:0.5rem;
+      font-weight:600;
+  }
+  .price{
+      font-size:1.5rem;
+      font-weight:600;
+  }
+  .main-price{
+      margin-bottom:0.5rem;
+  }
+  .secondary-price{
+      .label{
+          padding-top:0;
+          font-size:0.785rem;
+          line-height:1rem;
+          &.secondary{
+              font-weight:400;
+          }
+      }
+  }
+}
+
+
+
 /******  SWITCHES  ******/
 
 .containing-switch{
@@ -231,9 +229,6 @@
       padding-bottom:0.25rem;
     }
 }
-
-
-
 
 
 /**   CSS FOR SWITCH  ****/

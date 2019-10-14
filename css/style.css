@@ -175,6 +175,13 @@ ul.checklist {
 /*******
 UTILITIES
 ********/
+a.noredlink {
+  color: #373636;
+  text-decoration: underline; }
+  a.noredlink::after {
+    background: none;
+    display: none; }
+
 .spacer {
   display: block;
   padding-bottom: 2rem; }
@@ -238,6 +245,10 @@ p.lead {
   color: #989898;
   font-weight: 300;
   letter-spacing: 0.25px; }
+
+p.small {
+  font-size: 0.875rem;
+  line-height: 1.125rem; }
 
 @media (min-width: 992px) {
   h1 {
@@ -457,7 +468,7 @@ button {
       border: 1px solid #D0D0D0;
       background-color: #f7f7f7;
       line-height: 44px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       border-radius: 4px;
       padding: 0 1rem; }
   .select2-container .select2-selection--multiple {
@@ -472,7 +483,7 @@ button {
     .select2-container .select2-selection--multiple .select2-selection__rendered {
       border: 1px solid #D0D0D0;
       background-color: #f7f7f7;
-      line-height: 44px;
+      line-height: 39px;
       font-size: 1rem;
       border-radius: 4px;
       padding: 0 1rem; }
@@ -503,21 +514,7 @@ button {
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #063456; }
 
-/****/
-.language-selector-for-dates .btn-secondary {
-  background-color: #D0D0D0;
-  border-color: #D0D0D0;
-  color: #989898;
-  cursor: pointer; }
-  .language-selector-for-dates .btn-secondary.active {
-    background-color: #f7f7f7;
-    color: #373636;
-    box-shadow: 0 0 8px #cdcdcd; }
-
-#continue .modal-body p span {
-  display: block; }
-
-/******************/
+/********* RECURRENT COMPONENTS *********/
 #recap .inner {
   padding: 0.5rem;
   border: 2px dotted #D0D0D0; }
@@ -531,11 +528,54 @@ button {
         font-weight: 400;
         color: #373636; }
 
+/****/
+#modal-continue .modal-body p span {
+  display: block; }
+
 /*********************/
 #bottom-fixed {
   width: 100%;
   position: fixed;
   bottom: 0px; }
+
+#call-us {
+  width: 100%;
+  display: block;
+  background-color: #16A57B;
+  color: white;
+  padding: 0.725rem 0;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -ms-transform: all .25s ease-in-out;
+  transition: all .25s ease-in-out; }
+  #call-us:hover, #call-us:active, #call-us:focus {
+    background-color: #1ac391; }
+
+.modal .button.yellow {
+  width: 100%; }
+
+/******  SECOND STEP  ******/
+.no-gutters.two-selectors .col-6:first-child {
+  padding-right: 5px; }
+.no-gutters.two-selectors .col-6:last-child {
+  padding-left: 5px; }
+
+/******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
+.add-on-info {
+  padding: 0 0 0.875rem 0; }
+  .add-on-info span {
+    font-size: 0.875rem; }
+    .add-on-info span.add-on-label {
+      padding-bottom: 0.5rem;
+      display: block; }
+    .add-on-info span.toggle-link {
+      cursor: pointer;
+      text-decoration: underline; }
+  .add-on-info p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    line-height: 1.175rem; }
 
 #price-box {
   width: 100%;
@@ -557,38 +597,6 @@ button {
     line-height: 1rem; }
     #price-box .secondary-price .label.secondary {
       font-weight: 400; }
-
-#call-us {
-  width: 100%;
-  display: block;
-  background-color: #16A57B;
-  color: white;
-  padding: 0.725rem 0;
-  -webkit-transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -o-transition: all .25s ease-in-out;
-  -ms-transform: all .25s ease-in-out;
-  transition: all .25s ease-in-out; }
-  #call-us:hover, #call-us:active, #call-us:focus {
-    background-color: #1ac391; }
-
-.modal .button.yellow {
-  width: 100%; }
-
-.add-on-info {
-  padding: 0 0 0.875rem 0; }
-  .add-on-info span {
-    font-size: 0.875rem; }
-    .add-on-info span.add-on-label {
-      padding-bottom: 0.5rem;
-      display: block; }
-    .add-on-info span.toggle-link {
-      cursor: pointer;
-      text-decoration: underline; }
-  .add-on-info p {
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    line-height: 1.175rem; }
 
 /******  SWITCHES  ******/
 .containing-switch {
