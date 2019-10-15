@@ -588,6 +588,10 @@ p.option-caption {
     margin-bottom: 0;
     line-height: 1.175rem; }
 
+.extra-codes span.toggle-link {
+  cursor: pointer;
+  text-decoration: underline; }
+
 #price-box {
   width: 100%;
   display: block;

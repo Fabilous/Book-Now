@@ -205,6 +205,13 @@ p.option-caption{
     }
 }
 
+.extra-codes{
+  span.toggle-link{
+    cursor:pointer;
+    text-decoration:underline;
+  }
+}
+
 #price-box{
   width:100%;
   display:block;
