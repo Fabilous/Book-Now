@@ -504,6 +504,8 @@ button {
     background-color: #D0D0D0; }
   .select2-container.select2-container--default .select2-results__option[aria-disabled=true] {
     color: #bbb; }
+  .select2-container .select2-results__option {
+    padding-left: 1rem; }
 
 .select2-dropdown.select2-dropdown--below {
   margin-top: 2px; }
@@ -527,6 +529,9 @@ button {
       #recap .inner p.recap-selection a {
         font-weight: 400;
         color: #373636; }
+        #recap .inner p.recap-selection a::after {
+          background: none;
+          display: none; }
 
 /****/
 #modal-continue .modal-body p span {
@@ -560,6 +565,12 @@ button {
   padding-right: 5px; }
 .no-gutters.two-selectors .col-6:last-child {
   padding-left: 5px; }
+
+p.option-caption {
+  font-size: 0.875rem; }
+
+.form-group.from-group-destination {
+  margin-bottom: 0.5rem; }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {

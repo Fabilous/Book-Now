@@ -80,75 +80,116 @@
         
                 
         <div class="spacer"></div>
-
-          <h2>Select your destination</h2>
-          
-                      <div class="spacer small"></div>
   
       <!-- form start -->
 <form>
-<div class="row no-gutters two-selectors">
-
-  <div class="col-6">
-    <div class="form-group">
-        <label for="language-selection"><strong>Course language</strong></label>
-        <select class="select-type-one form-control" name="language-selection" style="width:100%">
-          <option value="1">English</option>
-          <option value="2">Danish</option>
-          <option value="3">Finnish</option>
-          <option value="4">French</option>
-          <option value="5">German</option>
-          <option value="6">Italian</option>
-          <option value="7">Spanish</option>
-          <option value="8">Swedish</option>
-        </select>
-      </div>
-    </div>
+  <div class="row no-gutters two-selectors">
 
     <div class="col-6">
       <div class="form-group">
-          <label for="date-selection"><strong>Destination</strong></label>
-        <select class="select-type-one form-control" name="date-selection" style="width:100%">
-          <option>Amsterdam</option>
-          <option>Bad Gastein</option>
-          <option>Barcelona</option>
-          <option disabled>Berlin</option>
-          <option>Cape town</option>
-          <option>Dublín</option>
-          <option disabled>Jalisco</option>
-          <option>Kos</option>
-          <option>London</option>
-          <option>Madrid</option>
-          <option>Mallorca</option>
-          <option>Miami</option>
-          <option>Milan</option>
-          <option>New York</option>
-          <option disabled>Oslo</option>
-          <option>Paris</option>
-          <option>Phuket</option>
-          <option>Rome</option>
-          <option disabled>Speyside</option>
-          <option disabled>Stockholm</option>
-          <option>Sydney</option>
-        </select>
+          <label for="language-selection"><strong>Course language</strong></label>
+          <select class="select-type-one form-control" name="language-selection" style="width:100%">
+            <option value="1">English</option>
+            <option value="2">Danish</option>
+            <option value="3">Finnish</option>
+            <option value="4">French</option>
+            <option value="5">German</option>
+            <option value="6">Italian</option>
+            <option value="7">Spanish</option>
+            <option value="8">Swedish</option>
+          </select>
+        </div>
       </div>
-    </div>
 
+      <div class="col-6">
+        <div class="form-group from-group-destination">
+            <label for="destination-selection"><strong>Destination</strong></label>
+          <select class="select-type-one form-control" name="destination-selection" style="width:100%">
+            <option>Amsterdam</option>
+            <option>Bad Gastein</option>
+            <option>Barcelona</option>
+            <option disabled>Berlin</option>
+            <option>Cape town</option>
+            <option>Dublín</option>
+            <option disabled>Jalisco</option>
+            <option>Kos</option>
+            <option>London</option>
+            <option>Madrid</option>
+            <option>Mallorca</option>
+            <option>Miami</option>
+            <option>Milan</option>
+            <option>New York</option>
+            <option disabled>Oslo</option>
+            <option>Paris</option>
+            <option>Phuket</option>
+            <option>Rome</option>
+            <option disabled>Speyside</option>
+            <option disabled>Stockholm</option>
+            <option>Sydney</option>
+          </select>
+        </div>
+        <p class="option-caption">Prices from <span>1960€</span></p>
+      </div>
 
-</div>             
+  </div>    
+
+            <!-- component -->
+
+            <div class="form-group">
+                <label for="date-selection"><strong>Course dates</strong></label>
+              <select class="select-type-one form-control" name="date-selection" style="width:100%">
+                      <optgroup label="2019">
+                        <option disabled>07 May - 01 Jun (full)</option>
+                        <option>04 Jun - 29 Jun (limited spaces)</option>
+                        <option selected>02 Jul - 27 Jul</option>
+                        <option>06 Aug - 31 Aug</option>
+                        <option>03 Sep - 28 Sep</option>
+                        <option>01 Oct - 26 Oct</option>
+                        <option>29 Oct - 23 Nov</option>  
+                        <option>27 Nov - 22 Dic</option> 
+                      </optgroup>
+                      <optgroup label="2020">
+                        <option>02 Jan - 27 Jan</option>
+                        <option>06 Feb - 31 Feb</option>
+                      </optgroup>
+              </select>
+            </div>
+
+            <div class="spacer small"></div>
+
+            <div class="row main-price">
+                <div class="col-8">
+                  <span class="label">Price</span>
+                </div>
+                <div class="col-4 text-right">
+                  <span class="price">2115€</span>
+                </div>
+              </div> 
+              
+              <div class="row secondary-price">
+                <div class="col-8">
+                  <span class="label">Installments availables from</span>
+                </div>
+                <div class="col-4 text-right">
+                  <span class="price">475€</span>
+                </div>
+              </div> 
+            
+          
+
 </form>
 
 
  
 
-
-            <div class="spacer small"></div>
+                          <div class="spacer small"></div>
+                                      <div class="spacer small"></div>
 
                           <a href="3.html" class="button yellow">Continue</a>
 
             
         </div>
-        <!-- end Typo buttons stuff container-->
+        <!-- end container-->
     
         
         

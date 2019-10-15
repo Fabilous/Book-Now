@@ -72,6 +72,10 @@
             color:#bbb;
         }
     }
+
+    .select2-results__option{
+      padding-left:1rem;
+    }
             
 }
 
@@ -108,6 +112,10 @@
 				a{
 					font-weight:400;
           color:$text-grey;
+          &::after{
+            background:none;
+            display:none;
+          }
 				}
 			}
 		}
@@ -164,6 +172,14 @@
         padding-left:5px;
       }
   }
+}
+
+p.option-caption{
+  font-size:0.875rem;
+}
+
+.form-group.from-group-destination{
+  margin-bottom:0.5rem;
 }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
