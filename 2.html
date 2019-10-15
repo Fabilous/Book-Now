@@ -19,7 +19,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="dist/css/mobiscroll.jquery.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     
@@ -135,25 +135,32 @@
 
             <!-- component -->
 
-            <div class="form-group">
-                <label for="date-selection"><strong>Course dates</strong></label>
-              <select class="select-type-one form-control" name="date-selection" style="width:100%">
-                      <optgroup label="2019">
-                        <option disabled>07 May - 01 Jun (full)</option>
-                        <option>04 Jun - 29 Jun (limited spaces)</option>
-                        <option selected>02 Jul - 27 Jul</option>
-                        <option>06 Aug - 31 Aug</option>
-                        <option>03 Sep - 28 Sep</option>
-                        <option>01 Oct - 26 Oct</option>
-                        <option>29 Oct - 23 Nov</option>  
-                        <option>27 Nov - 22 Dic</option> 
-                      </optgroup>
-                      <optgroup label="2020">
-                        <option>02 Jan - 27 Jan</option>
-                        <option>06 Feb - 31 Feb</option>
-                      </optgroup>
-              </select>
-            </div>
+
+                  <div class="mbsc-form-group form-group">
+                      <label for="date-selection"><strong>Course dates</strong></label>
+                      <div>
+                          <select name="dates-selection" id="demo-inline" data-enhance="false">
+                              <optgroup label="2019">
+                                  <option disabled>07 May - 01 Jun (full)</option>
+                                  <option>04 Jun - 29 Jun (limited spaces)</option>
+                                  <option selected>02 Jul - 27 Jul</option>
+                                  <option>06 Aug - 31 Aug</option>
+                                  <option>03 Sep - 28 Sep</option>
+                                  <option>01 Oct - 26 Oct</option>
+                                  <option>29 Oct - 23 Nov</option>  
+                                  <option>27 Nov - 22 Dic</option> 
+                                </optgroup>
+                                <optgroup label="2020">
+                                  <option>02 Jan - 27 Jan</option>
+                                  <option>06 Feb - 31 Feb</option>
+                                </optgroup>
+                          </select>
+                      </div>
+                    </div>
+
+
+
+            
 
             <div class="spacer small"></div>
 
@@ -214,6 +221,7 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     <script src="assets/js/vendor/jquery-slim.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/mobiscroll.jquery.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- JS - External file after, baby! --> 
@@ -245,6 +253,50 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
           maximumSelectionLength: 2
           });
     });
+
+
+
+     // Mobiscroll Select
+    mobiscroll.settings = {
+        
+        lang: 'es',   // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios'            // Specify theme like: theme: 'ios' or omit setting to use default
+    };
+    
+    $(function () {
+    
+        // Mobiscroll Select initialization
+        $('#demo-bottom').mobiscroll().select({
+            display: 'bottom'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-top').mobiscroll().select({
+            display: 'top'      // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-center').mobiscroll().select({
+            display: 'center'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-bubble').mobiscroll().select({
+            display: 'bubble'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-inline').mobiscroll().select({
+            display: 'inline',  // Specify display mode like: display: 'bottom' or omit setting to use default
+            showInput: false    // More info about showInput: https://docs.mobiscroll.com/4-8-3/select#opt-showInput
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-form').mobiscroll().form();
+    
+    });
+    
+
       </script>
       
   </body>

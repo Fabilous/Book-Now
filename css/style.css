@@ -609,7 +609,24 @@ p.option-caption {
     #price-box .secondary-price .label.secondary {
       font-weight: 400; }
 
-/******  SWITCHES  ******/
+/*******
+MOBI SELECTOR 
+********/
+.mbsc-ios .mbsc-sc-itm {
+  font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem; }
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d {
+  font-size: 0.875rem; }
+
+.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
+  color: #373636; }
+
+/******
+*******
+SWITCHES  
+********
+******/
 .containing-switch {
   border-bottom: 1px solid #f7f7f7; }
   .containing-switch.form-group {
