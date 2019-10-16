@@ -624,6 +624,12 @@ p.option-caption {
     padding-bottom: 0.875rem;
     padding-top: 0.875rem; }
 
+@media (min-width: 400px) {
+  #payment-options-img {
+    max-width: 305px; } }
+@media (min-width: 992px) {
+  .payment-method .button {
+    line-height: 2rem; } }
 /*******
 MOBI SELECTOR 
 ********/
