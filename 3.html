@@ -91,7 +91,7 @@
 
                       <div class="spacer small"></div>  
           <!-- form start -->
-        <form>
+        <form action="#" method="post" id="demoForm">
              
              
              <!-- component -->
@@ -103,7 +103,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-1">
+                      <input type="checkbox" class="switch" id="switch-1"  value="125">
                       <label for="switch-1"></label>
                     </span>
                 </div>
@@ -133,7 +133,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-2">
+                      <input type="checkbox" class="switch" id="switch-2"  value="85"> 
                       <label for="switch-2"></label>
                     </span>
                 </div>
@@ -164,7 +164,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-3">
+                      <input type="checkbox" class="switch" id="switch-3" value="85">
                       <label for="switch-3"></label>
                     </span>
                 </div>
@@ -195,7 +195,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-4">
+                      <input type="checkbox" class="switch" id="switch-4" value="85">
                       <label for="switch-4"></label>
                     </span>
                 </div>
@@ -224,7 +224,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-5">
+                      <input type="checkbox" class="switch" id="switch-5" value="185">
                       <label for="switch-5"></label>
                     </span>
                 </div>
@@ -255,7 +255,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-6">
+                      <input type="checkbox" class="switch" id="switch-6" value="225">
                       <label for="switch-6"></label>
                     </span>
                 </div>
@@ -322,28 +322,12 @@
                           </div>
                         </div>
 
-
                   </div>
                   
                   </div>
                 </div>
               </div>
             </div>
-
-
-            <script>
-            // Modifying prices
-
-            function myFunction() {
-              var x = document.getElementById("destination-select").value;
-              document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
-              document.getElementById("main-price").innerHTML = x + "€";
-              document.getElementById("installment-price").innerHTML = x / 4 + "€";
-            }
-            </script>
-            
-            
-            
                                   
           </form>
       </div>
@@ -356,6 +340,7 @@
 
             
         </div>
+
         <!-- end Typo buttons stuff container-->
     
         
@@ -381,7 +366,7 @@
           <span class="label">Price</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price" id="main-price">2115€</span>
+          <span class="price"><span id="main-price">2115</span>€</span>
         </div>
       </div> 
       
@@ -391,7 +376,7 @@
           <span class="label secondary">Price of first installment</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price" id="installment-price">475€</span>
+            <span class="price"><span id="installment-price">475</span>€</span>
         </div>
       </div> 
         
@@ -474,6 +459,11 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 
 
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/vendor/jquery-slim.min.js"></script>
@@ -504,8 +494,70 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     });
     
     
-
     </script>
+
+<script>
+
+///// Add-ons modifying price 
+
+  // call onload or in script segment below form
+function attachCheckboxHandlers() {
+    // get reference to element containing toppings checkboxes
+    var el = document.getElementById('demoForm');
+
+    // get reference to input elements in toppings container element
+    var tops = el.getElementsByClassName('switch');
+    
+    // assign updateTotal function to onclick property of each checkbox
+    for (var i=0, len=tops.length; i<len; i++) {
+        if ( tops[i].type === 'checkbox' ) {
+            tops[i].onclick = updateTotal;
+        }
+    }
+}
+    
+// called onclick of toppings checkboxes
+function updateTotal(e) {
+    // 'this' is reference to checkbox clicked on
+    var form = this.form;
+    
+    // get current value in total text box, using parseFloat since it is a string
+    ///////////var val = parseFloat( form.elements['total'].value );
+    var val =  parseFloat(document.getElementById("main-price").innerHTML);
+    
+    // if check box is checked, add its value to val, otherwise subtract it
+    if ( this.checked ) {
+        val += parseFloat(this.value);
+    } else {
+        val -= parseFloat(this.value);
+    }
+    
+    // format val with correct number of decimal places
+    // and use it to update value of total text box
+    ///////////form.elements['total'].value = formatDecimal(val);
+    document.getElementById("main-price").innerHTML = formatDecimal(val) ;
+
+    document.getElementById("installment-price").innerHTML = val / 4;
+
+    
+    
+}
+    
+// format val to n number of decimal places
+// modified version of Danny Goodman's (JS Bible)
+function formatDecimal(val, n) {
+    n = n || 0;
+    var str = "" + Math.round ( parseFloat(val) * Math.pow(10, n) );
+    while (str.length <= n) {
+        str = "0" + str;
+    }
+    var pt = str.length - n;
+    return str.slice(0,pt) + "" + str.slice(pt);
+}
+
+// in script segment below form
+attachCheckboxHandlers();
+</script>
       
       
       
