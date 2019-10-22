@@ -171,6 +171,16 @@ form{
 	}
 }
 
+.modal{
+    .form-check{
+        .form-check-input{
+            margin-left:0;
+        }
+    }
+}
+
+
+
 .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #a8a8a8;
 }

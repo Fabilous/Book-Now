@@ -121,6 +121,9 @@ select.form-control:not([size]):not([multiple]) {
 form label {
   margin-bottom: 0.25rem; }
 
+.modal .form-check .form-check-input {
+  margin-left: 0; }
+
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #a8a8a8; }
@@ -549,6 +552,7 @@ button {
   background-color: #16A57B;
   color: white;
   padding: 0.725rem 0;
+  cursor: pointer;
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
   -o-transition: all .25s ease-in-out;
