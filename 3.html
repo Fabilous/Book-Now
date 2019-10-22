@@ -286,7 +286,17 @@
                   
                  <p> <span><span class="toggle-link" data-toggle="collapse" data-target="#toggle-10" aria-controls="toggle-10" aria-expanded="false">I have a <i>promotion</i> code</span></span></p>
                   
-                  <p class="collapse" id="toggle-10"><input type="text" id="promotion-code" name="promotion-code" class="form-control" placeholder="Your promotion code here"></p>
+                  <div class="collapse" id="toggle-10">
+                      
+
+                       <div class="input-group mb-3">
+                          <input type="text" id="promotion-code" name="promotion-code" class="form-control" placeholder="Your promotion code here">                          
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Validate</button>
+                          </div>
+                        </div>
+                  
+                  </div>
                   
                   </div>
                 </div>
@@ -303,14 +313,34 @@
                   
                   <p><span><span class="toggle-link" data-toggle="collapse" data-target="#toggle-11" aria-controls="toggle-11" aria-expanded="false">I have a <i>group booking</i> code</span></span></p>
                   
-                  <p class="collapse" id="toggle-11"><input type="text" id="group-code" name="group-code" class="form-control" placeholder="Your group booking code here"></p>
+                  <div class="collapse" id="toggle-11">
+
+                       <div class="input-group mb-3">
+                          <input type="text" id="group-code" name="group-code" class="form-control" placeholder="Your group booking code here">                          
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Validate</button>
+                          </div>
+                        </div>
+
+
+                  </div>
                   
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
+            <script>
+            // Modifying prices
+
+            function myFunction() {
+              var x = document.getElementById("destination-select").value;
+              document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
+              document.getElementById("main-price").innerHTML = x + "€";
+              document.getElementById("installment-price").innerHTML = x / 4 + "€";
+            }
+            </script>
             
             
             
@@ -351,7 +381,7 @@
           <span class="label">Price</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price">2115€</span>
+          <span class="price" id="main-price">2115€</span>
         </div>
       </div> 
       
@@ -361,7 +391,7 @@
           <span class="label secondary">Price of first installment</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price">475€</span>
+          <span class="price" id="installment-price">475€</span>
         </div>
       </div> 
         
