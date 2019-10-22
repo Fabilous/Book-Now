@@ -286,7 +286,17 @@
                   
                  <p> <span><span class="toggle-link" data-toggle="collapse" data-target="#toggle-10" aria-controls="toggle-10" aria-expanded="false">I have a <i>promotion</i> code</span></span></p>
                   
-                  <p class="collapse" id="toggle-10"><input type="text" id="promotion-code" name="promotion-code" class="form-control" placeholder="Your promotion code here"></p>
+                  <div class="collapse" id="toggle-10">
+                      
+
+                       <div class="input-group mb-3">
+                          <input type="text" id="promotion-code" name="promotion-code" class="form-control" placeholder="Your promotion code here">                          
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Validate</button>
+                          </div>
+                        </div>
+                  
+                  </div>
                   
                   </div>
                 </div>
@@ -303,14 +313,34 @@
                   
                   <p><span><span class="toggle-link" data-toggle="collapse" data-target="#toggle-11" aria-controls="toggle-11" aria-expanded="false">I have a <i>group booking</i> code</span></span></p>
                   
-                  <p class="collapse" id="toggle-11"><input type="text" id="group-code" name="group-code" class="form-control" placeholder="Your group booking code here"></p>
+                  <div class="collapse" id="toggle-11">
+
+                       <div class="input-group mb-3">
+                          <input type="text" id="group-code" name="group-code" class="form-control" placeholder="Your group booking code here">                          
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Validate</button>
+                          </div>
+                        </div>
+
+
+                  </div>
                   
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
+            <script>
+            // Modifying prices
+
+            function myFunction() {
+              var x = document.getElementById("destination-select").value;
+              document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
+              document.getElementById("main-price").innerHTML = x + "€";
+              document.getElementById("installment-price").innerHTML = x / 4 + "€";
+            }
+            </script>
             
             
             
@@ -351,7 +381,7 @@
           <span class="label">Price</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price">2115€</span>
+          <span class="price" id="main-price">2115€</span>
         </div>
       </div> 
       
@@ -361,7 +391,7 @@
           <span class="label secondary">Price of first installment</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price">475€</span>
+          <span class="price" id="installment-price">475€</span>
         </div>
       </div> 
         
@@ -369,7 +399,7 @@
     
   </div>
   
-   <a id="call-us" class="text-center" href="#">
+  <a id="call-us" class="text-center" data-toggle="modal" data-target="#modal-call-back">
     
 Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call you back!
     
@@ -378,7 +408,7 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 
 
-<!-- Modal -->
+<!-- Modal Recap-->
 <div class="modal fade" id="modal-continue" tabindex="-1" role="dialog" aria-labelledby="modal-continue" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -406,6 +436,41 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     </div>
   </div>
 </div>
+
+<!-- Modal Call Back-->
+<div class="modal fade" id="modal-call-back" tabindex="-1" role="dialog" aria-labelledby="modal-continue" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">We are here to help</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <p>We will call you back as soon as possible for help you in anything you can need.</p>
+        <form>
+          <div class="form-group">
+            <input type="tel" class="form-control" id="InputPhone" placeholder="Your phone number">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Yes, I consent to the processing of my personal data in accordance with the <a href="">Privacy Policy</a>.</label>
+          </div>
+          
+        </form>
+  
+      </div>
+      
+      <div class="modal-footer">
+          <button type="submit" class="button yellow">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

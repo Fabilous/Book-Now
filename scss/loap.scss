@@ -148,6 +148,7 @@
     background-color:$green;
     color:white;
     padding:0.725rem 0;
+    cursor:pointer;
     @include transition-one();
     &:hover,&:active,&:focus{
         background-color:#1ac391; 

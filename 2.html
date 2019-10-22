@@ -88,6 +88,7 @@
     <div class="col-6">
       <div class="form-group">
           <label for="language-selection"><strong>Course language</strong></label>
+          <p class="option-caption">Your preferred language</p>
           <select class="select-type-one form-control" name="language-selection" style="width:100%">
             <option value="1">English</option>
             <option value="2">Danish</option>
@@ -101,37 +102,36 @@
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="form-group from-group-destination">
-            <label for="destination-selection"><strong>Destination</strong></label>
-          <select class="select-type-one form-control" name="destination-selection" style="width:100%">
-            <option>Amsterdam</option>
-            <option>Bad Gastein</option>
-            <option>Barcelona</option>
-            <option disabled>Berlin</option>
-            <option>Cape town</option>
-            <option>Dublín</option>
-            <option disabled>Jalisco</option>
-            <option>Kos</option>
-            <option>London</option>
-            <option>Madrid</option>
-            <option>Mallorca</option>
-            <option>Miami</option>
-            <option>Milan</option>
-            <option>New York</option>
-            <option disabled>Oslo</option>
-            <option>Paris</option>
-            <option>Phuket</option>
-            <option>Rome</option>
-            <option disabled>Speyside</option>
-            <option disabled>Stockholm</option>
-            <option>Sydney</option>
-          </select>
-        </div>
-        <p class="option-caption">Prices from <span>1960€</span></p>
-      </div>
+  <div class="col-6">
+      <div class="form-group from-group-destination">
+          <label for="destination-selection"><strong>Destination</strong></label>
+          <p class="option-caption price-changing" id="prices-from">Prices from 1960€</p>
+  <select class="select-type-one form-control" id="destination-select" onchange="myFunction()">
+      <option value="1940">Amsterdam</option>
+      <option value="2340">Bad Gastein</option>
+      <option value="2040">Barcelona</option>
+      <option value="1940">Berlin</option>
+      <option value="1915">Cape town</option>
+      <option value="1915">Dublín</option>
+      <option value="1875">Kos</option>
+      <option value="2115">London</option>
+      <option value="1890">Madrid</option>
+      <option value="2055">Mallorca</option>
+      <option value="2090">Miami</option>
+      <option value="1915">Milan</option>
+      <option value="1840">New York</option>
+      <option value="1915">Paris</option>
+      <option value="1890">Phuket</option>
+      <option value="1915">Rome</option>
+      <option value="1705">Stockholm</option>
+      <option value="2090">Sydney</option>
+    </select>
+  </div>
 
-  </div>    
+  </div>
+
+</div> 
+    
 
             <!-- component -->
 
@@ -159,17 +159,12 @@
                     </div>
 
 
-
-            
-
-
-
               <div class="row main-price">
                 <div class="col-8">
                   <span class="label">Price</span>
                 </div>
                 <div class="col-4 text-right">
-                  <span class="price">2115€</span>
+                  <span class="price" id="main-price">2115€</span>
                 </div>
               </div> 
               
@@ -178,16 +173,13 @@
                   <span class="label"><i class="fas fa-exclamation-circle" style="font-size:0.875rem;"></i> Installments availables from</span>
                 </div>
                 <div class="col-4 text-right">
-                  <span class="price">475€</span>
+                  <span class="price" id="installment-price">475€</span>
                 </div>
               </div> 
             
           
 
 </form>
-
-
- 
 
                           <div class="spacer small"></div>
                                       <div class="spacer small"></div>
@@ -210,12 +202,48 @@
 
    <!-- CALL US -->
 <div id="bottom-fixed">
-   <a id="call-us" class="text-center" href="#">
+  <a id="call-us" class="text-center" data-toggle="modal" data-target="#modal-call-back">
     
 Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call you back!
     
    </a>
 </div>
+
+
+<!-- Modal Call Back-->
+<div class="modal fade" id="modal-call-back" tabindex="-1" role="dialog" aria-labelledby="modal-continue" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">We are here to help</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <p>We will call you back as soon as possible for help you in anything you can need.</p>
+        <form>
+          <div class="form-group">
+            <input type="tel" class="form-control" id="InputPhone" placeholder="Your phone number">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Yes, I consent to the processing of my personal data in accordance with the <a href="">Privacy Policy</a>.</label>
+          </div>
+          
+        </form>
+  
+      </div>
+      
+      <div class="modal-footer">
+          <button type="submit" class="button yellow">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -297,6 +325,18 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     
     });
     
+
+
+    // Modifying prices
+
+    function myFunction() {
+      var x = document.getElementById("destination-select").value;
+      document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
+      document.getElementById("main-price").innerHTML = x + "€";
+      document.getElementById("installment-price").innerHTML = x / 4 + "€";
+    }
+
+
 
       </script>
       
