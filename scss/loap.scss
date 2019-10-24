@@ -301,6 +301,11 @@ SWITCHES
     &.form-group{
       margin-bottom:1.25rem;
       padding-bottom:0.25rem;
+      .extra-codes{
+        input{
+          z-index:0;
+        }
+      }
     }
 }
 
