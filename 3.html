@@ -546,6 +546,10 @@ function updateTotal(e) {
     document.getElementById("main-price").innerHTML = formatDecimal(val) ;
 
     document.getElementById("installment-price").innerHTML = val / 4;
+
+ 
+
+    sessionStorage.setItem("price-full", formatDecimal(val));
     
 }
     
@@ -560,6 +564,8 @@ function formatDecimal(val, n) {
     var pt = str.length - n;
     return str.slice(0,pt) + "" + str.slice(pt);
 }
+
+
 
 // in script segment below form
 attachCheckboxHandlers();

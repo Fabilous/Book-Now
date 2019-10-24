@@ -104,7 +104,7 @@
                     <span class="label"><strong>Total payment</strong></span>
                   </div>
                   <div class="col-4 text-right">
-                    <span class="price"><strong>2115€</strong></span>
+                    <span class="price"><strong><span id="main-price">2115</span>€</strong></span>
                   </div>
                 </div> 
 
@@ -125,7 +125,7 @@
                     <span class="label"><strong>Payment 1</strong>, April 1, 2020</span>
                   </div>
                   <div class="col-4 text-right">
-                    <span class="price"><strong>450€</strong></span>
+                    <span class="price"><strong><span id="installment-price">450</span>€</strong></span>
                   </div>
                 </div> 
                 <div class="row price">
@@ -133,7 +133,7 @@
                       <span class="label"><strong>Payment 2</strong>, April 15, 2020</span>
                     </div>
                     <div class="col-4 text-right">
-                      <span class="price"><strong>850€</strong></span>
+                      <span class="price"><strong><span id="installment-price-second">850</span>€</strong></span>
                     </div>
                 </div>
                 <div class="row price">
@@ -141,7 +141,7 @@
                       <span class="label"><strong>Payment 3</strong>, June 15, 2020</span>
                     </div>
                     <div class="col-4 text-right">
-                      <span class="price"><strong>850€</strong></span>
+                      <span class="price"><strong><span id="installment-price-third">850</span>€</strong></span>
                     </div>
                 </div>
 
@@ -162,7 +162,7 @@
                     <span class="label"><strong>Payment 1</strong>, June 15, 2020</span>
                   </div>
                   <div class="col-4 text-right">
-                    <span class="price"><strong>2115€</strong></span>
+                    <span class="price"><strong><span id="main-price-in-full"> 2115€</span></strong></span>
                   </div>
                 </div> 
 
@@ -282,6 +282,13 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     // Recap Update
     document.getElementById("destination-recap").innerHTML = sessionStorage.getItem("next-destination");
     document.getElementById("date-recap").innerHTML = sessionStorage.getItem("next-date");
+
+    document.getElementById("main-price").innerHTML = sessionStorage.getItem("price-full");
+    document.getElementById("main-price-in-full").innerHTML = sessionStorage.getItem("price-full");
+    var val = sessionStorage.getItem("price-full");
+    document.getElementById("installment-price").innerHTML = val / 4;
+    document.getElementById("installment-price-second").innerHTML = (val - (val / 4)) / 2;
+    document.getElementById("installment-price-third").innerHTML = (val - (val / 4)) / 2;
     
 
     </script>
