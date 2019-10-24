@@ -71,7 +71,7 @@
               
               <p class="recap-selection">International Bartender Course <a href="1.html">(change)</a></p>
               
-              <p class="recap-selection">English, in Phuket | 7 May to 1 June <a href="2.html">(change)</a></p>
+              <p class="recap-selection">English, in <span id="destination-recap">Phuket</span> | <span id="date-recap">7 May to 1 June</span> <a href="2.html">(change)</a></p>
               
             </div>
             
@@ -408,8 +408,8 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
         
         <p><span>Course:</span> <strong>International Bartender Course</strong></p>
         <p><span>Course language:</span> <strong>English</strong></p>
-        <p><span>Destination:</span> <strong>Phuket</strong></p>
-        <p><span>Course dates:</span> <strong>02 Apr 2019 - 20 Apr 2019</strong></p>
+        <p><span>Destination:</span> <strong><span id="destination-recap-popup">Phuket</span></strong></p>
+        <p><span>Course dates:</span> <strong><span id="date-recap-popup">02 Apr 2019 - 20 Apr 2019</span></strong></p>
         <p><span>Course hours:</span> <strong>From 09:00 to 15:00</strong></p>
         <p><span>Course add-ons:</span> <strong>Accommodation | EBS Flexible Boooking | 2-day Mixology + Accommodation</strong></p>
         
@@ -503,6 +503,10 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 document.getElementById("main-price").innerHTML = sessionStorage.getItem("price");
 var val = sessionStorage.getItem("price");
 document.getElementById("installment-price").innerHTML = val / 4;
+document.getElementById("destination-recap").innerHTML = sessionStorage.getItem("next-destination");
+document.getElementById("destination-recap-popup").innerHTML = sessionStorage.getItem("next-destination");
+document.getElementById("date-recap").innerHTML = sessionStorage.getItem("next-date");
+document.getElementById("date-recap-popup").innerHTML = sessionStorage.getItem("next-date");
 
   // call onload or in script segment below form
 function attachCheckboxHandlers() {

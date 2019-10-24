@@ -131,7 +131,6 @@
   </div>
 
 </div> 
-    
 
             <!-- component -->
 
@@ -328,7 +327,6 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 
     // Modifying prices
-
     
 
     function myFunction() {
@@ -337,6 +335,14 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
       document.getElementById("main-price").innerHTML = x + "€";
       document.getElementById("installment-price").innerHTML = x / 4 + "€";
       sessionStorage.setItem("price", x);
+
+      var e = document.getElementById("destination-select");
+      var destination = e.options[e.selectedIndex].text;
+      sessionStorage.setItem("next-destination", destination);
+      
+      var f = document.getElementById("demo-inline");
+      var destination = f.options[f.selectedIndex].text;
+      sessionStorage.setItem("next-date", destination);
     }
 
 

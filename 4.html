@@ -70,7 +70,7 @@
                     
                     <p class="recap-selection">International Bartender Course <a href="1.html">(change)</a></p>
 
-                    <p class="recap-selection">English, in Phuket | 7 May to 1 June <a href="2.html">(change)</a></p>
+                    <p class="recap-selection">English, in <span id="destination-recap">Phuket</span> | <span id="date-recap">7 May to 1 June</span> <a href="2.html">(change)</a></p>
 
                     <p class="recap-selection">Accommodation | EBS Educational Guarantee | 2-day Mixology + Accomodation <a href="3.html">(change)</a></p>
                     
@@ -278,6 +278,10 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
           });
     });
     
+
+    // Recap Update
+    document.getElementById("destination-recap").innerHTML = sessionStorage.getItem("next-destination");
+    document.getElementById("date-recap").innerHTML = sessionStorage.getItem("next-date");
     
 
     </script>
