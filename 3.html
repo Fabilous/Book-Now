@@ -500,6 +500,10 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 ///// Add-ons modifying price 
 
+document.getElementById("main-price").innerHTML = sessionStorage.getItem("price");
+var val = sessionStorage.getItem("price");
+document.getElementById("installment-price").innerHTML = val / 4;
+
   // call onload or in script segment below form
 function attachCheckboxHandlers() {
     // get reference to element containing toppings checkboxes
@@ -538,8 +542,6 @@ function updateTotal(e) {
     document.getElementById("main-price").innerHTML = formatDecimal(val) ;
 
     document.getElementById("installment-price").innerHTML = val / 4;
-
-    
     
 }
     

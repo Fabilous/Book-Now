@@ -329,11 +329,14 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
     // Modifying prices
 
+    
+
     function myFunction() {
       var x = document.getElementById("destination-select").value;
       document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
       document.getElementById("main-price").innerHTML = x + "€";
       document.getElementById("installment-price").innerHTML = x / 4 + "€";
+      sessionStorage.setItem("price", x);
     }
 
 
