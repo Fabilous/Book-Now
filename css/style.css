@@ -664,6 +664,8 @@ SWITCHES
   .containing-switch.form-group {
     margin-bottom: 1.25rem;
     padding-bottom: 0.25rem; }
+    .containing-switch.form-group .extra-codes input {
+      z-index: 0; }
 
 /**   CSS FOR SWITCH  ****/
 .switch {

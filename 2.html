@@ -105,7 +105,7 @@
   <div class="col-6">
       <div class="form-group from-group-destination">
           <label for="destination-selection"><strong>Destination</strong></label>
-          <p class="option-caption price-changing" id="prices-from">Prices from 1960€</p>
+          <p class="option-caption price-changing" id="prices-from">Prices from 1940€</p>
   <select class="select-type-one form-control" id="destination-select" onchange="myFunction()">
       <option value="1940">Amsterdam</option>
       <option value="2340">Bad Gastein</option>
@@ -131,7 +131,6 @@
   </div>
 
 </div> 
-    
 
             <!-- component -->
 
@@ -141,18 +140,18 @@
                       <div>
                           <select name="dates-selection" id="demo-inline" data-enhance="false">
                               <optgroup label="2019">
-                                  <option disabled>07 May - 01 Jun (full)</option>
-                                  <option>04 Jun - 29 Jun (limited spaces)</option>
-                                  <option selected>02 Jul - 27 Jul</option>
-                                  <option>06 Aug - 31 Aug</option>
-                                  <option>03 Sep - 28 Sep</option>
-                                  <option>01 Oct - 26 Oct</option>
-                                  <option>29 Oct - 23 Nov</option>  
-                                  <option>27 Nov - 22 Dic</option> 
-                                </optgroup>
-                                <optgroup label="2020">
-                                  <option>02 Jan - 27 Jan</option>
-                                  <option>06 Feb - 31 Feb</option>
+                                  <option disabled>07 Oct - 01 Nov (full)</option>
+                                  <option>04 Nov - 29 Nov (limited spaces)</option>
+                                  <option selected>02 Dic - 27 Dic</option>
+                              </optgroup>
+                              <optgroup label="2020">
+                                  <option>06 Jan - 31 Jan</option>
+                                  <option>03 Feb - 28 Feb</option>
+                                  <option>01 Mar - 26 Mar</option>
+                                  <option>29 Apr - 23 Apr</option>  
+                                  <option>27 Abr - 22 May</option>               
+                                  <option>02 Jun - 27 Jun</option>
+                                  <option>06 Jul - 31 Jul</option>
                                 </optgroup>
                           </select>
                       </div>
@@ -164,7 +163,7 @@
                   <span class="label">Price</span>
                 </div>
                 <div class="col-4 text-right">
-                  <span class="price" id="main-price">2115€</span>
+                  <span class="price" id="main-price">1940€</span>
                 </div>
               </div> 
               
@@ -173,7 +172,7 @@
                   <span class="label"><i class="fas fa-exclamation-circle" style="font-size:0.875rem;"></i> Installments availables from</span>
                 </div>
                 <div class="col-4 text-right">
-                  <span class="price" id="installment-price">475€</span>
+                  <span class="price" id="installment-price">485€</span>
                 </div>
               </div> 
             
@@ -328,12 +327,22 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 
     // Modifying prices
+    
 
     function myFunction() {
       var x = document.getElementById("destination-select").value;
       document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
       document.getElementById("main-price").innerHTML = x + "€";
       document.getElementById("installment-price").innerHTML = x / 4 + "€";
+      sessionStorage.setItem("price", x);
+
+      var e = document.getElementById("destination-select");
+      var destination = e.options[e.selectedIndex].text;
+      sessionStorage.setItem("next-destination", destination);
+      
+      var f = document.getElementById("demo-inline");
+      var destination = f.options[f.selectedIndex].text;
+      sessionStorage.setItem("next-date", destination);
     }
 
 

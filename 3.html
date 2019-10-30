@@ -71,7 +71,7 @@
               
               <p class="recap-selection">International Bartender Course <a href="1.html">(change)</a></p>
               
-              <p class="recap-selection">English, in Phuket - 7 May to 1 June <a href="2.html">(change)</a></p>
+              <p class="recap-selection">English, in <span id="destination-recap">Phuket</span> | <span id="date-recap">7 May to 1 June</span> <a href="2.html">(change)</a></p>
               
             </div>
             
@@ -91,7 +91,7 @@
 
                       <div class="spacer small"></div>  
           <!-- form start -->
-        <form>
+        <form action="#" method="post" id="demoForm">
              
              
              <!-- component -->
@@ -103,7 +103,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-1">
+                      <input type="checkbox" class="switch" id="switch-1"  value="125">
                       <label for="switch-1"></label>
                     </span>
                 </div>
@@ -114,9 +114,9 @@
                 <div class="col">
                   <div class="add-on-info">
                   
-                  <span class="add-on-label">125<span>€</span> for 3 weeks - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-1" aria-controls="toggle-1" aria-expanded="false">What is it?</span></span>
+                  <span class="add-on-label">125<span>€</span> for 4 weeks - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-1" aria-controls="toggle-1" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-1">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-1">You can choose to stay at EBS accommodation. Most of our students stay with us as it's the best way to socialise during the course.</p>
                   
                   </div>
                 </div>
@@ -133,7 +133,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-2">
+                      <input type="checkbox" class="switch" id="switch-2"  value="85"> 
                       <label for="switch-2"></label>
                     </span>
                 </div>
@@ -146,7 +146,7 @@
                   
                   <span class="add-on-label">85<span>€</span> - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-2" aria-controls="toggle-2" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-2">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-2">Flexible Booking plan allows you to change your course dates, course destination and even the name of the person on the booking.</p>
                   
                   </div>
                 </div>
@@ -164,7 +164,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-3">
+                      <input type="checkbox" class="switch" id="switch-3" value="85">
                       <label for="switch-3"></label>
                     </span>
                 </div>
@@ -177,7 +177,7 @@
                   
                   <span class="add-on-label">85<span>€</span> - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-3" aria-controls="toggle-3" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-3">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-3">EBS Educational Guarantee allows you to do the entire course again at the same destination. If you don't manage a pass first time round you have the opportunity to try again!</p>
                   
                   </div>
                 </div>
@@ -195,7 +195,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-4">
+                      <input type="checkbox" class="switch" id="switch-4" value="85">
                       <label for="switch-4"></label>
                     </span>
                 </div>
@@ -207,7 +207,7 @@
                   
                   <span class="add-on-label">85<span>€</span> - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-4" aria-controls="toggle-4" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-4">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-4">We offer our students peace of mind, with a Cancellation Protection Scheme. This allows a student a full refund if they are unable to take the course due to a reason covered by the scheme, at any time up to the date of the course starting.</p>
                   
                   </div>
                 </div>
@@ -224,7 +224,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-5">
+                      <input type="checkbox" class="switch" id="switch-5" value="185">
                       <label for="switch-5"></label>
                     </span>
                 </div>
@@ -237,7 +237,10 @@
                   
                   <span class="add-on-label">185<span>€</span> - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-5" aria-controls="toggle-5" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-5">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-5">Extend your EBS adventure and explore the fascinating world of mixology. Combine your 4-Week with the 2-Day Mixology NOW and you’ll get 100€ DISCOUNT! Learn how to make your own sodas, foams, syrups and cordials, and receive an additional EBS certificate.
+                    <br>
+                    *[the 2-Day Mixology must begin straight after the 4-Week]
+                  </p>
                   
                   </div>
                 </div>
@@ -255,7 +258,7 @@
                 </div>                
                 <div class="col col-4 text-right">
                     <span class="switch switch-sm">
-                      <input type="checkbox" class="switch" id="switch-6">
+                      <input type="checkbox" class="switch" id="switch-6" value="225">
                       <label for="switch-6"></label>
                     </span>
                 </div>
@@ -269,7 +272,10 @@
                   
                   <span class="add-on-label">225<span>€</span> - <span class="toggle-link" data-toggle="collapse" data-target="#toggle-6" aria-controls="toggle-6" aria-expanded="false">What is it?</span></span>
                   
-                  <p class="collapse" id="toggle-6">With Sketch, it is possible to export some of your design as code. CSS ... in the Canvas, Control-click and choose Copy CSS Attributes from the shortcut menu.</p>
+                  <p class="collapse" id="toggle-6">Extend your EBS adventure and explore the fascinating world of mixology. Combine your 4-Week with the 2-Day Mixology NOW and you’ll get 100€ DISCOUNT! Learn how to make your own sodas, foams, syrups and cordials, and receive an additional EBS certificate.
+                    <br>
+                    *[the 2-Day Mixology must begin straight after the 4-Week]
+                  </p>
                   
                   </div>
                 </div>
@@ -322,28 +328,12 @@
                           </div>
                         </div>
 
-
                   </div>
                   
                   </div>
                 </div>
               </div>
             </div>
-
-
-            <script>
-            // Modifying prices
-
-            function myFunction() {
-              var x = document.getElementById("destination-select").value;
-              document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
-              document.getElementById("main-price").innerHTML = x + "€";
-              document.getElementById("installment-price").innerHTML = x / 4 + "€";
-            }
-            </script>
-            
-            
-            
                                   
           </form>
       </div>
@@ -356,6 +346,7 @@
 
             
         </div>
+
         <!-- end Typo buttons stuff container-->
     
         
@@ -381,7 +372,7 @@
           <span class="label">Price</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price" id="main-price">2115€</span>
+          <span class="price"><span id="main-price">2115</span>€</span>
         </div>
       </div> 
       
@@ -391,7 +382,7 @@
           <span class="label secondary">Price of first installment</span>
         </div>
         <div class="col-4 text-right">
-          <span class="price" id="installment-price">475€</span>
+            <span class="price"><span id="installment-price">475</span>€</span>
         </div>
       </div> 
         
@@ -423,8 +414,8 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
         
         <p><span>Course:</span> <strong>International Bartender Course</strong></p>
         <p><span>Course language:</span> <strong>English</strong></p>
-        <p><span>Destination:</span> <strong>Phuket</strong></p>
-        <p><span>Course dates:</span> <strong>02 Apr 2019 - 20 Apr 2019</strong></p>
+        <p><span>Destination:</span> <strong><span id="destination-recap-popup">Phuket</span></strong></p>
+        <p><span>Course dates:</span> <strong><span id="date-recap-popup">02 Apr 2019 - 20 Apr 2019</span></strong></p>
         <p><span>Course hours:</span> <strong>From 09:00 to 15:00</strong></p>
         <p><span>Course add-ons:</span> <strong>Accommodation | EBS Flexible Boooking | 2-day Mixology + Accommodation</strong></p>
         
@@ -474,6 +465,11 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
 
 
 
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/vendor/jquery-slim.min.js"></script>
@@ -504,8 +500,82 @@ Unsure about something?   &nbsp;<i class="fas fa-phone"></i>&nbsp; We will call 
     });
     
     
-
     </script>
+
+<script>
+
+///// Add-ons modifying price 
+
+document.getElementById("main-price").innerHTML = sessionStorage.getItem("price");
+var val = sessionStorage.getItem("price");
+document.getElementById("installment-price").innerHTML = val / 4;
+document.getElementById("destination-recap").innerHTML = sessionStorage.getItem("next-destination");
+document.getElementById("destination-recap-popup").innerHTML = sessionStorage.getItem("next-destination");
+document.getElementById("date-recap").innerHTML = sessionStorage.getItem("next-date");
+document.getElementById("date-recap-popup").innerHTML = sessionStorage.getItem("next-date");
+
+  // call onload or in script segment below form
+function attachCheckboxHandlers() {
+    // get reference to element containing toppings checkboxes
+    var el = document.getElementById('demoForm');
+
+    // get reference to input elements in toppings container element
+    var tops = el.getElementsByClassName('switch');
+    
+    // assign updateTotal function to onclick property of each checkbox
+    for (var i=0, len=tops.length; i<len; i++) {
+        if ( tops[i].type === 'checkbox' ) {
+            tops[i].onclick = updateTotal;
+        }
+    }
+}
+    
+// called onclick of toppings checkboxes
+function updateTotal(e) {
+    // 'this' is reference to checkbox clicked on
+    var form = this.form;
+    
+    // get current value in total text box, using parseFloat since it is a string
+    ///////////var val = parseFloat( form.elements['total'].value );
+    var val =  parseFloat(document.getElementById("main-price").innerHTML);
+    
+    // if check box is checked, add its value to val, otherwise subtract it
+    if ( this.checked ) {
+        val += parseFloat(this.value);
+    } else {
+        val -= parseFloat(this.value);
+    }
+    
+    // format val with correct number of decimal places
+    // and use it to update value of total text box
+    ///////////form.elements['total'].value = formatDecimal(val);
+    document.getElementById("main-price").innerHTML = formatDecimal(val) ;
+
+    document.getElementById("installment-price").innerHTML = val / 4;
+
+ 
+
+    sessionStorage.setItem("price-full", formatDecimal(val));
+    
+}
+    
+// format val to n number of decimal places
+// modified version of Danny Goodman's (JS Bible)
+function formatDecimal(val, n) {
+    n = n || 0;
+    var str = "" + Math.round ( parseFloat(val) * Math.pow(10, n) );
+    while (str.length <= n) {
+        str = "0" + str;
+    }
+    var pt = str.length - n;
+    return str.slice(0,pt) + "" + str.slice(pt);
+}
+
+
+
+// in script segment below form
+attachCheckboxHandlers();
+</script>
       
       
       
