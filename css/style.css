@@ -582,7 +582,6 @@ button {
   width: 100%;
   position: fixed;
   bottom: 0px;
-  padding: 0.325rem 0;
   background-color: white;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2); }
   #bottom-fixed .button {
@@ -592,6 +591,8 @@ button {
     padding-right: 0.32rem; }
   #bottom-fixed .col-6:last-child {
     padding-left: 0.32rem; }
+  #bottom-fixed #bottom-ctas {
+    padding: 0.325rem 0; }
 
 #call-us {
   padding-top: 0.5rem;

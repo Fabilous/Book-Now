@@ -136,23 +136,25 @@
 
 
                   <div class="mbsc-form-group form-group">
-                      <label for="date-selection"><strong>Course dates</strong></label>
+                      <label for="date-selection"><strong>Course dates and hours</strong></label>
                       <div>
                           <select name="dates-selection" id="demo-inline" data-enhance="false">
                               <optgroup label="2019">
-                                  <option disabled>07 Oct - 01 Nov (full)</option>
-                                  <option>04 Nov - 29 Nov (limited spaces)</option>
+                                  <option disabled>07 Oct - 01 Nov (9:00 - 15:00)</option>
+                                  <option>04 Nov - 29 Nov (9:00 - 15:00)</option>
                                   <option>02 Dic - 27 Dic (9:00 - 15:00)</option>
                                   <option>02 Dic - 27 Dic (16:00 - 21:00)</option>
                               </optgroup>
                               <optgroup label="2020">
-                                  <option>06 Jan - 31 Jan</option>
-                                  <option>03 Feb - 28 Feb</option>
-                                  <option>01 Mar - 26 Mar</option>
-                                  <option>29 Apr - 23 Apr</option>  
-                                  <option>27 Abr - 22 May</option>               
-                                  <option>02 Jun - 27 Jun</option>
-                                  <option>06 Jul - 31 Jul</option>
+                                  <option>06 Jan - 31 Jan (16:00 - 21:00)</option>
+                                  <option>03 Feb - 28 Feb (16:00 - 21:00)</option>
+                                  <option>01 Mar - 26 Mar (9:00 - 15:000)</option>
+                                  <option>01 Mar - 26 Mar (16:00 - 21:00)</option>
+                                  <option>29 Apr - 23 Apr (16:00 - 21:00)</option>  
+                                  <option>27 Abr - 22 May (9:00 - 15:00)</option>
+                                  <option>27 Abr - 22 May (16:00 - 21:00)</option>                 
+                                  <option>02 Jun - 27 Jun (16:00 - 21:00)</option>
+                                  <option>06 Jul - 31 Jul (16:00 - 21:00)</option>
                                 </optgroup>
                           </select>
                       </div>
@@ -170,7 +172,7 @@
               
               <div class="row secondary-price">
                 <div class="col-8">
-                  <span class="label"  data-toggle="tooltip" data-placement="top" title="First installment in 1/4 of the price, the other 2 installment are 2/6."><i class="fas fa-exclamation-circle" style="font-size:0.875rem;"></i> Installments availables from</span>
+                  <span class="label"  data-toggle="tooltip" data-placement="top" title="First installment is 1/4 of the price, the other 2 installments are 2/6."><i class="fas fa-exclamation-circle" style="font-size:0.875rem;"></i> Installments availables from</span>
                 </div>
                 <div class="col-4 text-right">
                   <span class="price" id="installment-price">485€</span>
@@ -202,7 +204,7 @@
 
    <!-- CALL US -->
    <div id="bottom-fixed">
-    <div class="container">
+    <div class="container" id="bottom-ctas">
       <div class="row">
         <div class="col-6">
   
@@ -268,7 +270,6 @@
 
      // Mobiscroll Select
     mobiscroll.settings = {
-        
         lang: 'es',   // Specify language like: lang: 'pl' or omit setting to use default
         theme: 'ios'            // Specify theme like: theme: 'ios' or omit setting to use default
     };
@@ -306,7 +307,7 @@
     
     });
     
-
+    // Initialize Tooltips
     $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
