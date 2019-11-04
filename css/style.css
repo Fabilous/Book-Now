@@ -369,7 +369,8 @@ MODALS
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-align: center; }
+  text-align: center;
+  box-sizing: border-box; }
   .button:hover, .button:active, .button:focus {
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
@@ -387,8 +388,22 @@ MODALS
     background: #16A57B;
     color: white; }
     .button.green:hover, .button.green:active, .button.green:focus {
-      background: #128765;
+      background: #16A57B;
       opacity: 0.85; }
+  .button.green-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    background: transparent;
+    color: #16A57B;
+    border: 2px solid #16A57B;
+    box-shadow: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem; }
+    .button.green-empty:hover, .button.green-empty:active, .button.green-empty:focus {
+      background: #16A57B;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-color: #16A57B; }
   .button.red-empty {
     background: transparent;
     color: #E24444;
@@ -400,6 +415,8 @@ MODALS
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border-color: #E24444; }
   .button.blue-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
     background: transparent;
     color: #063456;
     border: 2px solid #063456;
@@ -410,6 +427,8 @@ MODALS
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border-color: #063456; }
   .button.white-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
     background: transparent;
     color: white;
     border: 2px solid white;
@@ -452,15 +471,23 @@ button {
     display: inline-block;
     width: auto;
     font-size: 1.25rem;
-    padding: 0 3rem; }
-    .button.red-full {
-      line-height: 4rem; }
-    .button.red-empty {
-      line-height: 3.75rem; }
-    .button.yellow {
-      line-height: 3.5rem; }
-    .button.green {
-      line-height: 4rem; } }
+    padding-left: 3rem;
+    padding-right: 3rem;
+    /*&.red-full{
+        line-height:4rem;
+    } 
+    &.red-empty{
+        line-height:3.75rem;  
+    }
+    &.yellow{
+        line-height:3.5rem;  
+    }
+    &.green{
+        line-height:4rem;  
+    }
+    &.green-empty{
+        line-height:3.75rem;  
+    }*/ } }
 .container {
   max-width: 768px; }
 
@@ -547,29 +574,36 @@ button {
 #modal-continue .modal-body p span {
   display: block; }
 
-/*********************/
+.modal .button.yellow {
+  width: 100%; }
+
+/********* BOTTOM FIXED CTAs************/
 #bottom-fixed {
   width: 100%;
   position: fixed;
-  bottom: 0px; }
+  bottom: 0px;
+  padding: 0.325rem 0;
+  background-color: white;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2); }
+  #bottom-fixed .button {
+    font-size: 1rem;
+    width: 100%; }
+  #bottom-fixed .col-6:first-child {
+    padding-right: 0.32rem; }
+  #bottom-fixed .col-6:last-child {
+    padding-left: 0.32rem; }
 
 #call-us {
-  width: 100%;
-  display: block;
-  background-color: #16A57B;
-  color: white;
-  padding: 0.725rem 0;
-  cursor: pointer;
-  -webkit-transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -o-transition: all .25s ease-in-out;
-  -ms-transform: all .25s ease-in-out;
-  transition: all .25s ease-in-out; }
-  #call-us:hover, #call-us:active, #call-us:focus {
-    background-color: #1ac391; }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
 
-.modal .button.yellow {
-  width: 100%; }
+#chat-with-us {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem; }
+  #chat-with-us i {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    font-size: 1.125rem; }
 
 /******  SECOND STEP  ******/
 .no-gutters.two-selectors .col-6:first-child {
@@ -582,6 +616,37 @@ p.option-caption {
 
 .form-group.from-group-destination {
   margin-bottom: 0.5rem; }
+
+/*******
+MOBI SELECTOR 
+********/
+.mbsc-ios .mbsc-sc-itm {
+  font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem; }
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d {
+  font-size: 0.875rem; }
+
+.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
+  color: #373636; }
+
+.mbsc-ios.mbsc-fr-inline .mbsc-fr-w {
+  margin-top: 0;
+  background-color: #f7f7f7; }
+
+.mbsc-ios .mbsc-sc-whl-gr-c {
+  padding: 0; }
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
+  text-align: center; }
+
+.mbsc-ios .mbsc-sc-whl .mbsc-sel-gr {
+  font-weight: bold;
+  color: #D0D0D0;
+  font-size: 1.35rem; }
+
+.mbsc-ios .mbsc-sc-whl-gr {
+  max-width: 100% !important; }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {
@@ -641,34 +706,6 @@ p.option-caption {
 @media (min-width: 992px) {
   .payment-method .button {
     line-height: 2rem; } }
-/*******
-MOBI SELECTOR 
-********/
-.mbsc-ios .mbsc-sc-itm {
-  font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem; }
-
-.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d {
-  font-size: 0.875rem; }
-
-.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
-  color: #373636; }
-
-.mbsc-ios.mbsc-fr-inline .mbsc-fr-w {
-  margin-top: 0;
-  background-color: #f7f7f7; }
-
-.mbsc-ios .mbsc-sc-whl-gr-c {
-  padding: 0; }
-
-.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
-  text-align: center; }
-
-.mbsc-ios .mbsc-sc-whl .mbsc-sel-gr {
-  font-weight: bold;
-  color: #D0D0D0;
-  font-size: 1.35rem; }
-
 /******
 *******
 SWITCHES  

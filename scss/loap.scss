@@ -134,32 +134,52 @@
     }
 }
 
-/*********************/
+.modal{
+  .button.yellow{
+      width:100%;
+  }
+}
+
+/********* BOTTOM FIXED CTAs************/
 
 #bottom-fixed{
   width:100%;
   position:fixed;
   bottom:0px; 
+  padding:0.325rem 0;
+  background-color:white;
+  box-shadow:0 -1px 3px rgba(0,0,0,0.2);
+  .button{
+    font-size:1rem;
+    width:100%;
+  }
+  .col-6{
+    &:first-child{
+      padding-right:0.32rem;
+    }
+    &:last-child{
+      padding-left:0.32rem;
+    }
+  }
 }
 
 #call-us{
-    width:100%;
-    display:block;
-    background-color:$green;
-    color:white;
-    padding:0.725rem 0;
-    cursor:pointer;
-    @include transition-one();
-    &:hover,&:active,&:focus{
-        background-color:#1ac391; 
-    }
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
 }
 
-.modal{
-    .button.yellow{
-        width:100%;
-    }
+#chat-with-us{
+  padding-top:0.375rem;
+  padding-bottom:0.375rem;
+  i{
+    font-family:"Font Awesome 5 Brands";
+    font-weight:400;
+    font-size:1.125rem;
+  }
+
 }
+
+
 
 
 /******  SECOND STEP  ******/
@@ -182,6 +202,51 @@ p.option-caption{
 .form-group.from-group-destination{
   margin-bottom:0.5rem;
 }
+
+
+/*******
+MOBI SELECTOR 
+********/
+
+
+.mbsc-ios .mbsc-sc-itm{
+  font-family:'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:1rem;
+}
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d{
+  font-size:0.875rem;
+}
+
+.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm{
+  color:$text-grey;
+}
+
+.mbsc-ios.mbsc-fr-inline .mbsc-fr-w{
+  margin-top:0;
+  background-color:#f7f7f7;
+}
+
+.mbsc-ios .mbsc-sc-whl-gr-c{
+  padding:0;
+}
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm{
+  text-align:center;
+}
+
+.mbsc-ios .mbsc-sc-whl .mbsc-sel-gr{
+  font-weight:bold;
+  color:$less-bright-grey;
+  font-size:1.35rem;
+}
+
+.mbsc-ios .mbsc-sc-whl-gr{
+  max-width:100% !important;
+}
+
+
+
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 
@@ -271,42 +336,7 @@ p.option-caption{
 } 
 
 
-/*******
-MOBI SELECTOR 
-********/
 
-
-.mbsc-ios .mbsc-sc-itm{
-  font-family:'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size:1rem;
-}
-
-.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d{
-  font-size:0.875rem;
-}
-
-.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm{
-  color:$text-grey;
-}
-
-.mbsc-ios.mbsc-fr-inline .mbsc-fr-w{
-  margin-top:0;
-  background-color:#f7f7f7;
-}
-
-.mbsc-ios .mbsc-sc-whl-gr-c{
-  padding:0;
-}
-
-.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm{
-  text-align:center;
-}
-
-.mbsc-ios .mbsc-sc-whl .mbsc-sel-gr{
-  font-weight:bold;
-  color:$less-bright-grey;
-  font-size:1.35rem;
-}
 
 /******
 *******

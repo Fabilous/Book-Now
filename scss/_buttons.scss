@@ -15,6 +15,7 @@
        font-weight:600;
        letter-spacing:0.5px;
        text-align:center;
+       box-sizing:border-box;
        &:hover,&:active,&:focus{
            text-decoration:none;
            box-shadow:0 2px 4px rgba(0,0,0,0.2);
@@ -37,10 +38,26 @@
            background:$green;
            color:white;
            &:hover,&:active,&:focus{
-               background:#128765;
+               background:$green;
                opacity:0.85;
            }
        }
+       &.green-empty{
+        padding-top:0.875rem;
+        padding-bottom:0.875rem;
+        background:transparent;
+        color:$green;
+        border:2px solid $green;
+        box-shadow:none;
+        padding-top:0.875rem;
+        padding-bottom:0.875rem;
+        &:hover,&:active,&:focus{
+            background:$green;
+            color:white;
+            box-shadow:0 2px 4px rgba(0,0,0,0.2);
+            border-color:$green;
+            }
+        }
        &.red-empty{
            background:transparent;
            color:$red;
@@ -54,6 +71,8 @@
            }
        }
        &.blue-empty{
+            padding-top:0.875rem;
+            padding-bottom:0.875rem;
             background:transparent;
             color:$blue;
             border:2px solid $blue;
@@ -66,6 +85,8 @@
             }
         }
         &.white-empty{
+            padding-top:0.875rem;
+            padding-bottom:0.875rem;
             background:transparent;
             color:white;
             border:2px solid white;
@@ -124,8 +145,9 @@ button{
         display:inline-block;
         width:auto;
         font-size:1.25rem;
-        padding:0 3rem;
-        &.red-full{
+        padding-left:3rem;
+        padding-right:3rem;
+        /*&.red-full{
             line-height:4rem;
         } 
         &.red-empty{
@@ -137,5 +159,8 @@ button{
         &.green{
             line-height:4rem;  
         }
+        &.green-empty{
+            line-height:3.75rem;  
+        }*/
     }
 }
