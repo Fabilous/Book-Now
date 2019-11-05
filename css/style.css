@@ -592,7 +592,7 @@ button {
   #bottom-fixed .col-6:last-child {
     padding-left: 0.32rem; }
   #bottom-fixed #bottom-ctas {
-    padding: 0.325rem 0; }
+    padding: 0.325rem 0.5rem; }
 
 #call-us {
   padding-top: 0.5rem;
@@ -613,11 +613,21 @@ button {
   padding-left: 5px; }
 
 p.option-caption {
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1rem; }
 
 .form-group.from-group-destination {
   margin-bottom: 0.5rem; }
 
+@media (max-width: 320px) {
+  .no-gutters.two-selectors .col-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%; }
+    .no-gutters.two-selectors .col-6:last-child {
+      padding-left: 0; }
+    .no-gutters.two-selectors .col-6 p.option-caption {
+      margin-bottom: 0.5rem; } }
 /*******
 MOBI SELECTOR 
 ********/
