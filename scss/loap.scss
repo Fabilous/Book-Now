@@ -266,6 +266,31 @@ MOBI SELECTOR
 
 
 
+/******  RESERVE LIST FORM  ******/
+
+#reserve-list-form{
+  .inner{
+    margin-top:0.5rem;
+    padding-top:1rem;
+    border-top:1px solid $less-bright-grey;
+  }
+  form{
+    display:block;
+    margin-top:0.5rem;
+    padding-top:1rem;
+    border-top:1px solid $less-bright-grey;
+  }
+  input,.button{
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+  }
+  .button{
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+    font-size:1rem;
+  }
+}
+
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 

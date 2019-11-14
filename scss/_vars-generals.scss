@@ -189,6 +189,23 @@ form{
             color:white;
         }
     }
+    .input-group-prepend{
+        .custom-select{
+            background-color:$bright-grey;
+            border:1px solid $middle-grey;
+            font-size:1rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right:0.5px;
+            &.form-control-lg{
+                font-size:1rem;
+                padding:0.625rem;
+            }
+            &:focus{
+                border-color:$text-grey;	
+            }
+        }
+    }
 }
 
 
@@ -248,7 +265,9 @@ ul.checklist{
 
 
 .alert{
-    display: flex;
+    &__inner{
+        display: flex;
+    }
     &--primary{
         background:white;
         border:2px solid $red;
@@ -313,7 +332,14 @@ a.noredlink{
 
 .spacer{
 	display:block;
-	padding-bottom:2rem;
+    padding-bottom:2rem;
+    &:after{
+        content: "."; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden;
+    }
 	&.double{
 		padding-bottom:4rem;
 	}

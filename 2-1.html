@@ -164,16 +164,16 @@
                                         <!-- component -->
         <div class="row">
             <div class="col">
-          
                 <div class="alert alert--secondary" role="alert">
-                    <span class="alert__icon"><i class="fa fa-exclamation-triangle"></i>
-                    </span>
-                    <div class="alert__content"> 
-                        <span class="alert__title">This course has limited spaces remaining.</span>
-                        <span class="alert__info">But you are still in time to book it now!</span>
-                    </div>
+                    <div class="alert__inner">
+                      <span class="alert__icon"><i class="fa fa-exclamation-triangle"></i>
+                      </span>
+                      <div class="alert__content"> 
+                          <span class="alert__title">This course has limited spaces remaining.</span>
+                          <span class="alert__info">But you are still in time to book it now!</span>
+                      </div>
+                  </div>
                 </div>
-          
             </div>
           </div>
           
@@ -183,17 +183,47 @@
               <div class="col">
             
                   <div class="alert alert--primary" role="alert">
+                    <div class="alert__inner">
                       <span class="alert__icon"><i class="fa fa-exclamation-triangle"></i>
                       </span>
                       <div class="alert__content"> 
                         <span class="alert__title">This course is full.</span>
                         <span class="alert__subtitle">These dates are popular! </span>
-                        <span class="alert__info">You can search for another date or add yourself to the <a href="#">reserve list</a>.</span>
+                        <span class="alert__info">You can search for another date or add yourself to the <a  data-toggle="collapse" href="#reserve-list-form" role="button" aria-expanded="false" aria-controls="reserve-list-form">reserve list</a>.</span>
                       </div>
+                    </div>
+
+                    <div class="collapse" id="reserve-list-form">
+                      <div class="inner">
+                          <form> 
+                              <div class="form-group">
+                                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" placeholder="Enter Your Name"> 
+                              </div>
+                              <div class="form-group">
+                                  <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email"> 
+                              </div>
+                              <div class="input-group">
+                                  <div class="input-group-prepend">
+                                      <select class="custom-select" id="Prefix">
+                                          <option selected>Prefix</option>
+                                          <option value="1">+34</option>
+                                          <option value="2">+35</option>
+                                          <option value="3">+36</option>
+                                        </select>
+                                  </div>
+                                  <input type="tel" class="form-control" aria-label="Telehone number" placeholder="Your Phone Number">
+                              </div>
+                              <button type="submit" class="button red-empty">Submit</button>
+                          </form>
+                        </div>
+                    </div>
                   </div>
+
                 
               </div>
             </div>
+
+
 
 
 

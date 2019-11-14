@@ -130,6 +130,18 @@ form label {
   border-left: none;
   background-color: #063456;
   color: white; }
+.input-group .input-group-prepend .custom-select {
+  background-color: #f7f7f7;
+  border: 1px solid #989898;
+  font-size: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0.5px; }
+  .input-group .input-group-prepend .custom-select.form-control-lg {
+    font-size: 1rem;
+    padding: 0.625rem; }
+  .input-group .input-group-prepend .custom-select:focus {
+    border-color: #373636; }
 
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -176,35 +188,35 @@ ul.checklist {
       .alertbox .content p strong {
         font-weight: 600; }
 
-.alert {
+.alert__inner {
   display: flex; }
-  .alert--primary {
-    background: white;
-    border: 2px solid #E24444; }
-    .alert--primary .fa {
-      color: #E24444; }
-    .alert--primary .alert__title {
-      color: #E24444; }
-  .alert--secondary {
-    background: white;
-    border: 2px solid #F78053; }
-    .alert--secondary .fa {
-      color: #F78053; }
-    .alert--secondary .alert__title {
-      color: #F78053; }
-  .alert__icon {
-    margin-right: 1rem;
-    object-fit: contain;
-    align-self: flex-start; }
-  .alert__content {
-    flex: 1 1 auto; }
-    .alert__content span {
-      display: block; }
-  .alert__title {
-    font-weight: 600;
-    margin-bottom: 0.5rem; }
-  .alert__info {
-    color: #989898; }
+.alert--primary {
+  background: white;
+  border: 2px solid #E24444; }
+  .alert--primary .fa {
+    color: #E24444; }
+  .alert--primary .alert__title {
+    color: #E24444; }
+.alert--secondary {
+  background: white;
+  border: 2px solid #F78053; }
+  .alert--secondary .fa {
+    color: #F78053; }
+  .alert--secondary .alert__title {
+    color: #F78053; }
+.alert__icon {
+  margin-right: 1rem;
+  object-fit: contain;
+  align-self: flex-start; }
+.alert__content {
+  flex: 1 1 auto; }
+  .alert__content span {
+    display: block; }
+.alert__title {
+  font-weight: 600;
+  margin-bottom: 0.5rem; }
+.alert__info {
+  color: #989898; }
 
 @media (min-width: 576px) {
   .alertbox {
@@ -225,6 +237,12 @@ a.noredlink {
 .spacer {
   display: block;
   padding-bottom: 2rem; }
+  .spacer:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
   .spacer.double {
     padding-bottom: 4rem; }
   .spacer.small {
@@ -688,6 +706,24 @@ MOBI SELECTOR
 
 .mbsc-ios .mbsc-sc-whl-gr {
   max-width: 100% !important; }
+
+/******  RESERVE LIST FORM  ******/
+#reserve-list-form .inner {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D0D0D0; }
+#reserve-list-form form {
+  display: block;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D0D0D0; }
+#reserve-list-form input, #reserve-list-form .button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+#reserve-list-form .button {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {
