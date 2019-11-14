@@ -176,6 +176,36 @@ ul.checklist {
       .alertbox .content p strong {
         font-weight: 600; }
 
+.alert {
+  display: flex; }
+  .alert--primary {
+    background: white;
+    border: 2px solid #E24444; }
+    .alert--primary .fa {
+      color: #E24444; }
+    .alert--primary .alert__title {
+      color: #E24444; }
+  .alert--secondary {
+    background: white;
+    border: 2px solid #F78053; }
+    .alert--secondary .fa {
+      color: #F78053; }
+    .alert--secondary .alert__title {
+      color: #F78053; }
+  .alert__icon {
+    margin-right: 1rem;
+    object-fit: contain;
+    align-self: flex-start; }
+  .alert__content {
+    flex: 1 1 auto; }
+    .alert__content span {
+      display: block; }
+  .alert__title {
+    font-weight: 600;
+    margin-bottom: 0.5rem; }
+  .alert__info {
+    color: #989898; }
+
 @media (min-width: 576px) {
   .alertbox {
     padding: 1.5rem 1.5rem 1rem 1.5rem; }

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>2 - Language, Destination and Date Selection</title>
+    <meta name="description" content="LOAP is COOL">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#d44a49">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/mobiscroll.jquery.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <!-- Extra Tags -->
+    <meta property="og:image" content="assets/img/shake-your-future-og.jpg"/>
+    <meta property="og:description" content="LOAP is COOL" />
+
+      
+  </head>
+  <body>
+    
+    <div class="up-1" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="assets/img/ebs-logo.svg" alt="EBS logo" class="img-fluid" id="logo">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="main-content">
+      
+      
+
+      
+    <!-- main content start -->
+        
+      <div class="container">
+        
+        
+        <!-- recap -->
+        
+        <div class="row">
+          
+          <div id="recap" class="col-12">
+            
+            <div class="inner">
+            
+              <p class="recap-label">Your Selection</p>
+              
+              <p class="recap-selection">International Bartender Course <a href="1.html">(change)</a></p>
+              
+            </div>
+            
+          </div>
+        
+        </div>
+        
+                
+        <div class="spacer"></div>
+  
+      <!-- form start -->
+<form>
+  <div class="row no-gutters two-selectors">
+
+    <div class="col-6">
+      <div class="form-group">
+          <label for="language-selection"><strong>Course language</strong></label>
+          <p class="option-caption">Preferred language</p>
+          <select class="select-type-one form-control" name="language-selection" style="width:100%">
+            <option value="1">English</option>
+            <option value="2">Danish</option>
+            <option value="3">Finnish</option>
+            <option value="4">French</option>
+            <option value="5">German</option>
+            <option value="6">Italian</option>
+            <option value="7">Spanish</option>
+            <option value="8">Swedish</option>
+          </select>
+        </div>
+      </div>
+
+  <div class="col-6">
+      <div class="form-group from-group-destination">
+              <label for="destination-selection"><strong>Destination</strong></label>
+              <p class="option-caption price-changing" id="prices-from">Prices from 1940€</p>
+        <select class="select-type-one form-control" id="destination-select" onchange="myFunction()">
+          <option value="1940">Amsterdam</option>
+          <option value="2340">Bad Gastein</option>
+          <option value="2040">Barcelona</option>
+          <option value="1940">Berlin</option>
+          <option value="1915">Cape town</option>
+          <option value="1915">Dublin</option>
+          <option value="1875">Kos</option>
+          <option value="2115">London</option>
+          <option value="1890">Madrid</option>
+          <option value="2055">Mallorca</option>
+          <option value="2090">Miami</option>
+          <option value="1915">Milan</option>
+          <option value="1840">New York</option>
+          <option value="1915">Paris</option>
+          <option value="1890">Phuket</option>
+          <option value="1915">Rome</option>
+          <option value="1705">Stockholm</option>
+          <option value="2090">Sydney</option>
+        </select>
+     </div>
+
+  </div>
+
+</div> 
+
+
+
+            <!-- component -->
+
+
+                  <div class="mbsc-form-group form-group">
+                      <label for="dates-selection"><strong>Course dates and hours</strong></label>
+                      <div>
+                          <select name="dates-selection" id="demo-inline" data-enhance="false">
+                              <optgroup label="2019">
+                                  <option disabled>07 Oct - 01 Nov (9:00 - 15:00)</option>
+                                  <option>04 Nov - 29 Nov (9:00 - 15:00)</option>
+                                  <option>02 Dic - 27 Dic (9:00 - 15:00)</option>
+                                  <option>02 Dic - 27 Dic (16:00 - 21:00)</option>
+                              </optgroup>
+                              <optgroup label="2020">
+                                  <option>06 Jan - 31 Jan (16:00 - 21:00)</option>
+                                  <option>03 Feb - 28 Feb (16:00 - 21:00)</option>
+                                  <option>01 Mar - 26 Mar (9:00 - 15:000)</option>
+                                  <option>01 Mar - 26 Mar (16:00 - 21:00)</option>
+                                  <option>29 Apr - 23 Apr (16:00 - 21:00)</option>  
+                                  <option>27 Abr - 22 May (9:00 - 15:00)</option>
+                                  <option>27 Abr - 22 May (16:00 - 21:00)</option>                 
+                                  <option>02 Jun - 27 Jun (16:00 - 21:00)</option>
+                                  <option>06 Jul - 31 Jul (16:00 - 21:00)</option>
+                                </optgroup>
+                          </select>
+                      </div>
+                    </div>
+
+
+
+                                        <!-- component -->
+        <div class="row">
+            <div class="col">
+          
+                <div class="alert alert--secondary" role="alert">
+                    <span class="alert__icon"><i class="fa fa-exclamation-triangle"></i>
+                    </span>
+                    <div class="alert__content"> 
+                        <span class="alert__title">This course has limited spaces remaining.</span>
+                        <span class="alert__info">But you are still in time to book it now!</span>
+                    </div>
+                </div>
+          
+            </div>
+          </div>
+          
+          
+          
+          <div class="row">
+              <div class="col">
+            
+                  <div class="alert alert--primary" role="alert">
+                      <span class="alert__icon"><i class="fa fa-exclamation-triangle"></i>
+                      </span>
+                      <div class="alert__content"> 
+                        <span class="alert__title">This course is full.</span>
+                        <span class="alert__subtitle">These dates are popular! </span>
+                        <span class="alert__info">You can search for another date or add yourself to the <a href="#">reserve list</a>.</span>
+                      </div>
+                  </div>
+                
+              </div>
+            </div>
+
+
+
+
+            <!-- component -->
+
+
+              <div class="row main-price">
+                <div class="col-8">
+                  <span class="label">Price</span>
+                </div>
+                <div class="col-4 text-right">
+                  <span class="price" id="main-price">1940€</span>
+                </div>
+              </div> 
+              
+              <div class="row secondary-price">
+                <div class="col-8">
+                  <span class="label"  data-toggle="tooltip" data-placement="top" title="First installment is 1/4 of the price, the other 2 installments are 2/6."><i class="fas fa-exclamation-circle" style="font-size:0.875rem;"></i> Installments availables from</span>
+                </div>
+                <div class="col-4 text-right">
+                  <span class="price" id="installment-price">485€</span>
+                </div>
+              </div> 
+            
+          
+
+</form>
+
+                          <div class="spacer small"></div>
+                                      <div class="spacer small"></div>
+
+                          <a href="3.html" class="button yellow">Continue to Extra Options</a>
+
+            
+        </div>
+        <!-- end container-->
+    
+        
+        
+           <!-- --spacer-- --> <div class="spacer double"></div>
+           <div class="spacer double"></div>
+
+      </div>
+      <!-- main content-ends -->
+   
+
+
+   <!-- CALL US -->
+   <div id="bottom-fixed">
+    <div class="container" id="bottom-ctas">
+      <div class="row">
+        <div class="col-6">
+  
+            <a class="text-center button green" href="" id="call-us">   
+          <i class="fas fa-phone"></i>&nbsp; Call us        
+            </a>
+  
+        </div>
+  
+        <div class="col-6">
+  
+            <a class="text-center button green-empty" href="" id="chat-with-us">   
+                  <i class="fas fa-whatsapp"></i>&nbsp; Chat with us        
+            </a>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/vendor/jquery-slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/mobiscroll.jquery.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- JS - External file after, baby! --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
+     <script>
+     
+     // menu resize
+      $(window).scroll(function (event) {
+        var y = $(this).scrollTop(); //set position from top when to change style in pixels
+        if (y >= 300) {
+            $('#header').addClass('resized');
+        } else {
+            $('#header').removeClass('resized');
+        }
+    });
+      
+      
+     // Select Type 1      
+    $(document).ready(function() {
+        $('.select-type-one').select2({
+          minimumResultsForSearch: Infinity
+          });
+    });
+
+    // Select Type 2      
+             $(document).ready(function() {
+        $('.select-type-two').select2({
+          minimumResultsForSearch: Infinity,
+          maximumSelectionLength: 2
+          });
+    });
+
+
+
+     // Mobiscroll Select
+    mobiscroll.settings = {
+        lang: 'es',   // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios'            // Specify theme like: theme: 'ios' or omit setting to use default
+    };
+    
+    $(function () {
+    
+        // Mobiscroll Select initialization
+        $('#demo-bottom').mobiscroll().select({
+            display: 'bottom'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-top').mobiscroll().select({
+            display: 'top'      // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-center').mobiscroll().select({
+            display: 'center'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-bubble').mobiscroll().select({
+            display: 'bubble'   // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-inline').mobiscroll().select({
+            display: 'inline',  // Specify display mode like: display: 'bottom' or omit setting to use default
+            showInput: false    // More info about showInput: https://docs.mobiscroll.com/4-8-3/select#opt-showInput
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-form').mobiscroll().form();
+    
+    });
+    
+    // Initialize Tooltips
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    // Modifying prices
+    
+
+    function myFunction() {
+      var x = document.getElementById("destination-select").value;
+      document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
+      document.getElementById("main-price").innerHTML = x + "€";
+      document.getElementById("installment-price").innerHTML = x / 4 + "€";
+      sessionStorage.setItem("price", x);
+
+      var e = document.getElementById("destination-select");
+      var destination = e.options[e.selectedIndex].text;
+      sessionStorage.setItem("next-destination", destination);
+      
+      var f = document.getElementById("demo-inline");
+      var destination = f.options[f.selectedIndex].text;
+      sessionStorage.setItem("next-date", destination);
+    }
+
+
+
+      </script>
+
+<script>
+  </script>
+
+      
+  </body>
+</html>

@@ -10,6 +10,7 @@ $bright-grey:#f7f7f7;
 $green:#16A57B;
 $blue:#063456;
 $yellow:#FFCD00;
+$orange-alert:#F78053;
 
 
 @mixin transition-one(){
@@ -244,6 +245,50 @@ ul.checklist{
         }
     }
 }
+
+
+.alert{
+    display: flex;
+    &--primary{
+        background:white;
+        border:2px solid $red;
+        .fa{
+            color:$red;
+        }
+        .alert__title{
+            color:$red;
+        }       
+    }
+    &--secondary{
+        background:white;
+        border:2px solid $orange-alert;
+        .fa{
+            color:$orange-alert;
+        }
+        .alert__title{
+            color:$orange-alert;
+        }       
+    }
+    &__icon {
+        margin-right:1rem;
+        object-fit: contain;
+        align-self: flex-start;
+    }
+    &__content {
+        flex: 1 1 auto;
+        span{
+            display:block;
+        }
+    }
+    &__title{
+        font-weight:600;
+        margin-bottom:0.5rem;
+    }
+    &__info{
+        color:$middle-grey;
+    }
+}
+
 
 @media (min-width: 576px) { 
     .alertbox{
