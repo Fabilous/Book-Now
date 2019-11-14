@@ -502,6 +502,11 @@ MODALS
     .button.white-full:hover, .button.white-full:active, .button.white-full:focus {
       background-color: #f7f7f7;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22); }
+  .button__icon {
+    float: left;
+    display: inline-block;
+    width: 50px;
+    text-align: center; }
 
 .blue-background .button.yellow {
   box-shadow: 0 2px 4px black, 0 3px 4px black, 0 1px 5px black; }
@@ -783,6 +788,15 @@ MOBI SELECTOR
 @media (min-width: 992px) {
   .payment-method .button {
     line-height: 2rem; } }
+/******  FIFTH STEP - LOGIN/REGISTER  ******/
+#login-register-buttons .button {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left; }
+
+#or {
+  display: block; }
+
 /******
 *******
 SWITCHES  
