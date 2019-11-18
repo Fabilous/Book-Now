@@ -741,6 +741,8 @@ MOBI SELECTOR
     .add-on-info span.toggle-link {
       cursor: pointer;
       text-decoration: underline; }
+    .add-on-info span.original-price {
+      text-decoration: line-through; }
   .add-on-info p {
     font-size: 0.875rem;
     margin-bottom: 0;
@@ -826,6 +828,10 @@ SWITCHES
 ******/
 .containing-switch {
   border-bottom: 1px solid #f7f7f7; }
+  .containing-switch .row.icon {
+    margin-bottom: 0.5rem; }
+    .containing-switch .row.icon i {
+      font-size: 1.125rem; }
   .containing-switch.form-group {
     margin-bottom: 1.25rem;
     padding-bottom: 0.25rem; }

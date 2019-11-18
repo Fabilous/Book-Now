@@ -305,7 +305,9 @@ MOBI SELECTOR
         &.toggle-link{
             cursor:pointer;
             text-decoration:underline;
-            
+        }
+        &.original-price{
+          text-decoration:line-through;
         }
     }
     p{
@@ -451,6 +453,12 @@ SWITCHES
 
 .containing-switch{
     border-bottom:1px solid $bright-grey;
+    .row.icon{
+      margin-bottom:0.5rem;
+      i{
+        font-size:1.125rem
+      }
+    }
     &.form-group{
       margin-bottom:1.25rem;
       padding-bottom:0.25rem;
