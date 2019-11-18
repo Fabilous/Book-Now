@@ -115,33 +115,39 @@ FORMS
   .form-control:focus {
     border-color: #D0D0D0; }
 
-select.form-control:not([size]):not([multiple]) {
-  height: calc(2.75rem + 2px); }
-
+/*select.form-control:not([size]):not([multiple]) {
+    height: calc(2.75rem + 2px);
+}*/
 form label {
-  margin-bottom: 0.25rem; }
-
-.modal .form-check .form-check-input {
-  margin-left: 0; }
-
-.input-group .input-group-append button {
+  margin-bottom: 0.25rem;
+  display: block; }
+form .input-group .input-group-append button {
   padding: 1rem;
   border-radius: 0 0.25rem 0.25rem 0;
   border-left: none;
   background-color: #063456;
   color: white; }
-.input-group .input-group-prepend .custom-select {
+form .input-group .custom-select {
   background-color: #f7f7f7;
-  border: 1px solid #989898;
+  border: 1px solid #D0D0D0;
   font-size: 1rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-right: 0.5px; }
-  .input-group .input-group-prepend .custom-select.form-control-lg {
+  height: 54px !important; }
+  form .input-group .custom-select:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
+  form .input-group .custom-select.form-control-lg {
     font-size: 1rem;
     padding: 0.625rem; }
-  .input-group .input-group-prepend .custom-select:focus {
-    border-color: #373636; }
+  form .input-group .custom-select:focus {
+    border-color: #D0D0D0; }
+form .form-check a {
+  color: #373636;
+  text-decoration: underline; }
+
+.modal .form-check .form-check-input {
+  margin-left: 0; }
 
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -800,10 +806,8 @@ MOBI SELECTOR
   display: block; }
 
 /******  SIXTH AND SEVENTH STEP ******/
-#personal-details-form label {
-  display: block; }
 #personal-details-form .input-group .input-group-prepend .custom-select {
-  height: 54px; }
+  border-right: 0.5px; }
 #personal-details-form .button {
   margin-top: 2rem; }
 #personal-details-form .form-check-inline {
@@ -814,13 +818,44 @@ MOBI SELECTOR
   #personal-details-form .form-check-inline input[type=radio] {
     margin-top: 0.25rem;
     margin-left: 0;
-    transform: scale(1.25); }
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -webkit-perspective: 1000;
+    -webkit-font-smoothing: subpixel-antialiased; }
+#personal-details-form .form-check input[type=checkbox] {
+  margin-top: 0.25rem;
+  margin-left: 0;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -webkit-perspective: 1000;
+  -webkit-font-smoothing: subpixel-antialiased; }
+#personal-details-form #birth-date .custom-select:first-child {
+  border-right: 0.5px; }
+#personal-details-form #birth-date .custom-select:last-child {
+  border-left: 0.5px; }
 
 @media (min-width: 1200px) {
-  #personal-details-form .form-check-inline label {
+  #personal-details-form .form-check label {
     padding-left: 1.5rem; }
-  #personal-details-form .form-check-inline input[type=radio] {
-    margin-top: 0.15rem; } }
+  #personal-details-form .form-check input[type=radio] {
+    margin-top: 0.12rem; }
+  #personal-details-form .form-check input[type=checkbox] {
+    margin-top: 0.25rem; } }
+/*ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) and (min-width: 769px) {
+  #personal-details-form .form-check input[type=radio] {
+    transform: scale(1); }
+  #personal-details-form .form-check input[type=checkbox] {
+    transform: scale(1); } }
+/******  SIXTH AND SEVENTH STEP ******/
+#recap-page h5 {
+  margin-bottom: 0.25rem;
+  margin-top: 1.5rem; }
+#recap-page ul.checklist li {
+  margin-bottom: 0.5rem; }
+
 /******
 *******
 SWITCHES  

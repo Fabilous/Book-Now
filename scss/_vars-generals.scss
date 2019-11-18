@@ -161,15 +161,54 @@ FORMS
     }
 }
 
-select.form-control:not([size]):not([multiple]) {
+/*select.form-control:not([size]):not([multiple]) {
     height: calc(2.75rem + 2px);
-}
+}*/
 
 form{
-	label{
-		margin-bottom:0.25rem;
+    label{
+        margin-bottom:0.25rem;
+        display:block;
 	}
+    .input-group{
+        .input-group-append{
+            button{
+                padding:1rem;
+                border-radius:0 0.25rem 0.25rem 0;
+                border-left:none;
+                background-color:$blue;
+                color:white;
+            }
+        }
+        .custom-select{
+                background-color:$bright-grey;
+                border:1px solid $less-bright-grey;
+                font-size:1rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                height:54px !important;
+                &:last-child{
+                    border-top-right-radius: 0.25rem;
+                    border-bottom-right-radius: 0.25rem;   
+                }
+                &.form-control-lg{
+                    font-size:1rem;
+                    padding:0.625rem;
+                }
+                &:focus{
+            border-color:$less-bright-grey;		
+                }
+        }
+    }
+    .form-check{
+        a{
+            color:$text-grey;
+            text-decoration:underline;
+        }
+    }
 }
+
+
 
 .modal{
     .form-check{
@@ -179,34 +218,10 @@ form{
     }
 }
 
-.input-group{
-    .input-group-append{
-        button{
-            padding:1rem;
-            border-radius:0 0.25rem 0.25rem 0;
-            border-left:none;
-            background-color:$blue;
-            color:white;
-        }
-    }
-    .input-group-prepend{
-        .custom-select{
-            background-color:$bright-grey;
-            border:1px solid $middle-grey;
-            font-size:1rem;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-right:0.5px;
-            &.form-control-lg{
-                font-size:1rem;
-                padding:0.625rem;
-            }
-            &:focus{
-                border-color:$text-grey;	
-            }
-        }
-    }
+form{
+
 }
+
 
 
 

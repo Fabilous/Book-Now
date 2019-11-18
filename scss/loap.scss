@@ -405,14 +405,11 @@ MOBI SELECTOR
 
 
 #personal-details-form{
-  label{
-    display:block;
-  }
   .input-group{
     .input-group-prepend{
-        .custom-select{
-            height:54px;
-        }
+      .custom-select{
+        border-right:0.5px;
+      }
     }
   }
   .button{
@@ -428,22 +425,84 @@ MOBI SELECTOR
       margin-top:0.25rem;
       margin-left:0;
       transform: scale(1.25);
+      -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+      -webkit-perspective: 1000;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+  .form-check{
+    input[type=checkbox]{
+      margin-top:0.25rem;
+      margin-left:0;
+      transform: scale(1.25);
+      -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+      -webkit-perspective: 1000;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+  #birth-date{
+    .custom-select{
+      &:first-child{
+        border-right:0.5px;
+      }
+      &:last-child{
+        border-left:0.5px;
+      }
     }
   }
 }
 
 @media (min-width: 1200px) { 
   #personal-details-form{
-    .form-check-inline{
+    .form-check{
       label{
         padding-left:1.5rem;
       }
       input[type=radio]{
-        margin-top:0.15rem;
+        margin-top:0.12rem;
+      }
+      input[type=checkbox]{
+        margin-top:0.25rem;
       }
     }
   }
 }
+
+/*ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT*/
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (min-width: 769px){
+  #personal-details-form{
+    .form-check{
+      input[type=radio]{
+        transform: scale(1);
+      }
+      input[type=checkbox]{
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+/******  SIXTH AND SEVENTH STEP ******/
+
+#recap-page{
+  h5{
+    margin-bottom:0.25rem;
+    margin-top:1.5rem;
+  }
+  ul.checklist{
+    li{
+      margin-bottom:0.5rem;
+    }
+  }
+}
+
+
+
+
+
+
 
 /******
 *******

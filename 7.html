@@ -71,36 +71,68 @@
 
           <div id="personal-details-form">
             <form>
+                <div class="form-group">
+                    <label for="birthDate">Your birth date</label>
+                  <div class="input-group" id="birth-date">
+                      <select class="custom-select form-control" id="year">
+                          <option selected>Year</option>
+                          <option value="1">1987</option>
+                          <option value="2">1986</option>
+                          <option value="3">1989</option>
+                      </select>
+                    <select class="custom-select form-control" id="month">
+                        <option selected>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                    </select>
+                    <select class="custom-select form-control" id="day">
+                        <option selected>Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Your gender</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
+                    <label class="form-check-label" for="Female">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Male" value="male">
+                    <label class="form-check-label" for="Male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Non-binary" value="non-binary">
+                    <label class="form-check-label" for="Non-binary">Non-binary</label>
+                  </div>
+                </div>
               <div class="form-group">
-                  <label for="firstName">Your Address</label>
-                  <input type="text" class="form-control" id="address"> 
+                    <label for="postcode">Your country of residence</label>
+                    <input type="text" class="form-control" id="postcode"> 
               </div>
               <div class="form-group">
                   <label for="city">The city where you live</label>
                   <input type="text" class="form-control" id="city"> 
               </div>
               <div class="form-group">
-                  <label for="postcode">Your Postcode</label>
-                  <input type="number" class="form-control" id="postcode"> 
+                  <label for="firstName">Your address</label>
+                  <input type="text" class="form-control" id="address"> 
               </div>
               <div class="form-group">
-                  <label for="gender">Your Gender</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
-                  <label class="form-check-label" for="Female">Female</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="gender" id="Male" value="male">
-                  <label class="form-check-label" for="Male">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="gender" id="Non-binary" value="non-binary">
-                  <label class="form-check-label" for="Non-binary">Non-binary</label>
-                </div>
+                  <label for="postcode">Your postcode</label>
+                  <input type="number" class="form-control" id="postcode"> 
               </div>
 
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="acceptance">
+                  <label class="form-check-label" for="acceptance">You agree with all the <a href="#">terms and conditions</a> that you will never ever read.</label>
+                </div>
 
-              <button type="submit" class="button yellow">Continue</button>
+
+              <a href="8.html" class="button yellow">Continue</a>
             </form>
           </div>
 
