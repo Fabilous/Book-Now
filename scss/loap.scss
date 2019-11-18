@@ -403,6 +403,9 @@ MOBI SELECTOR
 
 
 #personal-details-form{
+  label{
+    display:block;
+  }
   .input-group{
     .input-group-prepend{
         .custom-select{
@@ -412,6 +415,31 @@ MOBI SELECTOR
   }
   .button{
     margin-top:2rem;
+  }
+  .form-check-inline{
+    margin-right:1rem;
+    margin-top:0.25rem;
+    label{
+      font-size:0.875rem;
+    }
+    input[type=radio]{
+      margin-top:0.25rem;
+      margin-left:0;
+      transform: scale(1.25);
+    }
+  }
+}
+
+@media (min-width: 1200px) { 
+  #personal-details-form{
+    .form-check-inline{
+      label{
+        padding-left:1.5rem;
+      }
+      input[type=radio]{
+        margin-top:0.15rem;
+      }
+    }
   }
 }
 

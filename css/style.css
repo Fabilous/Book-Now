@@ -106,14 +106,14 @@ FORMS
 ********/
 .form-control {
   background-color: #f7f7f7;
-  border: 1px solid #989898;
+  border: 1px solid #D0D0D0;
   font-size: 1rem;
   padding: 1rem; }
   .form-control.form-control-lg {
     font-size: 1rem;
     padding: 0.625rem; }
   .form-control:focus {
-    border-color: #373636; }
+    border-color: #D0D0D0; }
 
 select.form-control:not([size]):not([multiple]) {
   height: calc(2.75rem + 2px); }
@@ -798,11 +798,27 @@ MOBI SELECTOR
   display: block; }
 
 /******  SIXTH AND SEVENTH STEP ******/
+#personal-details-form label {
+  display: block; }
 #personal-details-form .input-group .input-group-prepend .custom-select {
   height: 54px; }
 #personal-details-form .button {
   margin-top: 2rem; }
+#personal-details-form .form-check-inline {
+  margin-right: 1rem;
+  margin-top: 0.25rem; }
+  #personal-details-form .form-check-inline label {
+    font-size: 0.875rem; }
+  #personal-details-form .form-check-inline input[type=radio] {
+    margin-top: 0.25rem;
+    margin-left: 0;
+    transform: scale(1.25); }
 
+@media (min-width: 1200px) {
+  #personal-details-form .form-check-inline label {
+    padding-left: 1.5rem; }
+  #personal-details-form .form-check-inline input[type=radio] {
+    margin-top: 0.15rem; } }
 /******
 *******
 SWITCHES  

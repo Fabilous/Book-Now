@@ -149,7 +149,7 @@ FORMS
 ********/
 .form-control{
 	background-color:$bright-grey;
-	border:1px solid $middle-grey;
+	border:1px solid $less-bright-grey;
     font-size:1rem;
     padding:1rem;
 	&.form-control-lg{
@@ -157,8 +157,8 @@ FORMS
 		padding:0.625rem;
 	}
 	&:focus{
-		border-color:$text-grey;	
-	}
+		border-color:$less-bright-grey;	
+    }
 }
 
 select.form-control:not([size]):not([multiple]) {
