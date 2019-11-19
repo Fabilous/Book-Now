@@ -433,7 +433,7 @@ MOBI SELECTOR
   }
   .form-check{
     input[type=checkbox]{
-      margin-top:0.25rem;
+      margin-top:0.35rem;
       margin-left:0;
       transform: scale(1.25);
       -webkit-transform: scale(1.25);
@@ -454,7 +454,7 @@ MOBI SELECTOR
   }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 769px) { 
   #personal-details-form{
     .form-check{
       label{
@@ -463,14 +463,18 @@ MOBI SELECTOR
       input[type=radio]{
         margin-top:0.12rem;
       }
-      input[type=checkbox]{
-        margin-top:0.25rem;
-      }
     }
   }
 }
 
-/*ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT*/
+/* ONLY FIREFOX HACK */
+
+@-moz-document url-prefix() {
+      
+}
+
+/* ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT - NOT 100% EFFECTIVE
+AS FOR CHROME IN DESKTOP WITH REDUCED WINDOW IS STILL NOT DIPLAYING CORRECTLY */
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (min-width: 769px){
   #personal-details-form{
     .form-check{
