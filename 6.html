@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>5 - Register</title>
+    <title>6 - Personal Details 1</title>
     <meta name="description" content="LOAP is COOL">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -63,33 +63,47 @@
 
     <div class="row">
       <div class="col-12">    
-          <h2>Register</h2>
+          <h2>Hi!</h2>
+          <h4>Please, complete your data for registration</h4>
 
 
           <div class="spacer"></div>
-          
-          <div id="login-register-buttons">
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-facebook"></i></span>
-                Register with Facebook
-            </a>     
 
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-google"></i></span>
-                Register with Google
-            </a>  
-
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fa fa-envelope"></i></span>
-                Register with Email
-            </a>  
+          <div id="personal-details-form">
+            <form>
+              <div class="form-group">
+                  <label for="firstName">Your First Name</label>
+                  <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp"> 
+              </div>
+              <div class="form-group">
+                  <label for="lastName">Your Last Name</label>
+                  <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp"> 
+              </div>
+              <div class="form-group">
+                  <label for="lastName">Your Email</label>
+                  <input type="email" class="form-control" id="yourEmail" aria-describedby="emailHelp"> 
+              </div>
+              <div class="form-group">
+                <label for="yourPhone">Your Phone Number</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <select class="custom-select" id="Prefix">
+                            <option selected>Prefix</option>
+                            <option value="1">+34</option>
+                            <option value="2">+35</option>
+                            <option value="3">+36</option>
+                          </select>
+                    </div>
+                    <input type="tel" class="form-control" aria-label="Telephone number" id="yourPhone">
+                </div>
+              </div>
+              <a href="7.html" class="button yellow">Continue to Your Address</a>
+            </form>
           </div>
 
 
           <div class="spacer double"></div>
 
-          <p class="small text-center text-lg-left">Already have an account?</p>
-          <p class="small text-center text-lg-left"><a href="5-1.html" class="noredlink">Login</a></p>
 
       </div>
     </div>

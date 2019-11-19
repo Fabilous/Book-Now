@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>5 - Register</title>
+    <title>5 - Login</title>
     <meta name="description" content="LOAP is COOL">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -63,33 +63,43 @@
 
     <div class="row">
       <div class="col-12">    
-          <h2>Register</h2>
+          <h2>Login</h2>
 
 
           <div class="spacer"></div>
           
           <div id="login-register-buttons">
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-facebook"></i></span>
-                Register with Facebook
-            </a>     
-
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-google"></i></span>
-                Register with Google
-            </a>  
-
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fa fa-envelope"></i></span>
-                Register with Email
-            </a>  
+              <a href="6.html" class="button blue-empty">
+                  <span class="button__icon"><i class="fab fa-facebook"></i></span>
+                  Login with Facebook
+              </a>     
+  
+              <a href="6.html" class="button blue-empty">
+                  <span class="button__icon"><i class="fab fa-google"></i></span>
+                  Login with Google
+              </a>  
+ 
           </div>
+
+          <div class="spacer"></div>
+          <span class="text-center" id="or">or</span>
+          <div class="spacer"></div>
+
+          <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" placeholder="Your Name"> 
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Your Email"> 
+            </div>
+            <input type="submit" class="button blue-empty" value="Login">
+          </form>
 
 
           <div class="spacer double"></div>
 
-          <p class="small text-center text-lg-left">Already have an account?</p>
-          <p class="small text-center text-lg-left"><a href="5-1.html" class="noredlink">Login</a></p>
+          <p class="small text-center text-lg-left">Don't have an account?</p>
+          <p class="small text-center text-lg-left"><a href="5.html" class="noredlink">Register</a></p>
 
       </div>
     </div>

@@ -10,6 +10,7 @@ $bright-grey:#f7f7f7;
 $green:#16A57B;
 $blue:#063456;
 $yellow:#FFCD00;
+$orange-alert:#F78053;
 
 
 @mixin transition-one(){
@@ -134,7 +135,6 @@ SHADOWS
     box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
 
-
 /*******
 MODALS
 ********/
@@ -149,7 +149,7 @@ FORMS
 ********/
 .form-control{
 	background-color:$bright-grey;
-	border:1px solid $middle-grey;
+	border:1px solid $less-bright-grey;
     font-size:1rem;
     padding:1rem;
 	&.form-control-lg{
@@ -157,19 +157,58 @@ FORMS
 		padding:0.625rem;
 	}
 	&:focus{
-		border-color:$text-grey;	
-	}
+		border-color:$less-bright-grey;	
+    }
 }
 
-select.form-control:not([size]):not([multiple]) {
+/*select.form-control:not([size]):not([multiple]) {
     height: calc(2.75rem + 2px);
-}
+}*/
 
 form{
-	label{
-		margin-bottom:0.25rem;
+    label{
+        margin-bottom:0.25rem;
+        display:block;
 	}
+    .input-group{
+        .input-group-append{
+            button{
+                padding:1rem;
+                border-radius:0 0.25rem 0.25rem 0;
+                border-left:none;
+                background-color:$blue;
+                color:white;
+            }
+        }
+        .custom-select{
+                background-color:$bright-grey;
+                border:1px solid $less-bright-grey;
+                font-size:1rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                height:54px !important;
+                &:last-child{
+                    border-top-right-radius: 0.25rem;
+                    border-bottom-right-radius: 0.25rem;   
+                }
+                &.form-control-lg{
+                    font-size:1rem;
+                    padding:0.625rem;
+                }
+                &:focus{
+            border-color:$less-bright-grey;		
+                }
+        }
+    }
+    .form-check{
+        a{
+            color:$text-grey;
+            text-decoration:underline;
+        }
+    }
 }
+
+
 
 .modal{
     .form-check{
@@ -179,17 +218,10 @@ form{
     }
 }
 
-.input-group{
-    .input-group-append{
-        button{
-            padding:1rem;
-            border-radius:0 0.25rem 0.25rem 0;
-            border-left:none;
-            background-color:$blue;
-            color:white;
-        }
-    }
+form{
+
 }
+
 
 
 
@@ -246,6 +278,52 @@ ul.checklist{
     }
 }
 
+
+.alert{
+    &__inner{
+        display: flex;
+    }
+    &--primary{
+        background:white;
+        border:2px solid $red;
+        .fa{
+            color:$red;
+        }
+        .alert__title{
+            color:$red;
+        }       
+    }
+    &--secondary{
+        background:white;
+        border:2px solid $orange-alert;
+        .fa{
+            color:$orange-alert;
+        }
+        .alert__title{
+            color:$orange-alert;
+        }       
+    }
+    &__icon {
+        margin-right:1rem;
+        object-fit: contain;
+        align-self: flex-start;
+    }
+    &__content {
+        flex: 1 1 auto;
+        span{
+            display:block;
+        }
+    }
+    &__title{
+        font-weight:600;
+        margin-bottom:0.5rem;
+    }
+    &__info{
+        color:$middle-grey;
+    }
+}
+
+
 @media (min-width: 576px) { 
     .alertbox{
         padding:1.5rem 1.5rem 1rem 1.5rem;
@@ -269,7 +347,14 @@ a.noredlink{
 
 .spacer{
 	display:block;
-	padding-bottom:2rem;
+    padding-bottom:2rem;
+    &:after{
+        content: "."; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden;
+    }
 	&.double{
 		padding-bottom:4rem;
 	}

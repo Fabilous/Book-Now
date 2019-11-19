@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>5 - Register</title>
+    <title>7 - Personal Details 2</title>
     <meta name="description" content="LOAP is COOL">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -63,33 +63,82 @@
 
     <div class="row">
       <div class="col-12">    
-          <h2>Register</h2>
+          <h2>Hi, yourName!</h2>
+          <h4>Please, complete your data for registration</h4>
 
 
           <div class="spacer"></div>
-          
-          <div id="login-register-buttons">
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-facebook"></i></span>
-                Register with Facebook
-            </a>     
 
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fab fa-google"></i></span>
-                Register with Google
-            </a>  
+          <div id="personal-details-form">
+            <form>
+                <div class="form-group">
+                    <label for="birthDate">Your birth date</label>
+                  <div class="input-group" id="birth-date">
+                      <select class="custom-select form-control" id="year">
+                          <option selected>Year</option>
+                          <option value="1">1987</option>
+                          <option value="2">1986</option>
+                          <option value="3">1989</option>
+                      </select>
+                    <select class="custom-select form-control" id="month">
+                        <option selected>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                    </select>
+                    <select class="custom-select form-control" id="day">
+                        <option selected>Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Your gender</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
+                    <label class="form-check-label" for="Female">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Male" value="male">
+                    <label class="form-check-label" for="Male">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Non-binary" value="non-binary">
+                    <label class="form-check-label" for="Non-binary">Non-binary</label>
+                  </div>
+                </div>
+              <div class="form-group">
+                    <label for="postcode">Your country of residence</label>
+                    <input type="text" class="form-control" id="postcode"> 
+              </div>
+              <div class="form-group">
+                  <label for="city">The city where you live</label>
+                  <input type="text" class="form-control" id="city"> 
+              </div>
+              <div class="form-group">
+                  <label for="firstName">Your address</label>
+                  <input type="text" class="form-control" id="address"> 
+              </div>
+              <div class="form-group">
+                  <label for="postcode">Your postcode</label>
+                  <input type="number" class="form-control" id="postcode"> 
+              </div>
 
-            <a href="6.html" class="button blue-empty">
-                <span class="button__icon"><i class="fa fa-envelope"></i></span>
-                Register with Email
-            </a>  
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="acceptance">
+                  <label class="form-check-label" for="acceptance">You agree with all the <a href="#">terms and conditions</a> that you will never ever read.</label>
+                </div>
+
+
+              <a href="8.html" class="button yellow">Continue</a>
+            </form>
           </div>
 
 
           <div class="spacer double"></div>
 
-          <p class="small text-center text-lg-left">Already have an account?</p>
-          <p class="small text-center text-lg-left"><a href="5-1.html" class="noredlink">Login</a></p>
 
       </div>
     </div>

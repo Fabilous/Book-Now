@@ -106,30 +106,48 @@ FORMS
 ********/
 .form-control {
   background-color: #f7f7f7;
-  border: 1px solid #989898;
+  border: 1px solid #D0D0D0;
   font-size: 1rem;
   padding: 1rem; }
   .form-control.form-control-lg {
     font-size: 1rem;
     padding: 0.625rem; }
   .form-control:focus {
-    border-color: #373636; }
+    border-color: #D0D0D0; }
 
-select.form-control:not([size]):not([multiple]) {
-  height: calc(2.75rem + 2px); }
-
+/*select.form-control:not([size]):not([multiple]) {
+    height: calc(2.75rem + 2px);
+}*/
 form label {
-  margin-bottom: 0.25rem; }
-
-.modal .form-check .form-check-input {
-  margin-left: 0; }
-
-.input-group .input-group-append button {
+  margin-bottom: 0.25rem;
+  display: block; }
+form .input-group .input-group-append button {
   padding: 1rem;
   border-radius: 0 0.25rem 0.25rem 0;
   border-left: none;
   background-color: #063456;
   color: white; }
+form .input-group .custom-select {
+  background-color: #f7f7f7;
+  border: 1px solid #D0D0D0;
+  font-size: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 54px !important; }
+  form .input-group .custom-select:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
+  form .input-group .custom-select.form-control-lg {
+    font-size: 1rem;
+    padding: 0.625rem; }
+  form .input-group .custom-select:focus {
+    border-color: #D0D0D0; }
+form .form-check a {
+  color: #373636;
+  text-decoration: underline; }
+
+.modal .form-check .form-check-input {
+  margin-left: 0; }
 
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -176,6 +194,36 @@ ul.checklist {
       .alertbox .content p strong {
         font-weight: 600; }
 
+.alert__inner {
+  display: flex; }
+.alert--primary {
+  background: white;
+  border: 2px solid #E24444; }
+  .alert--primary .fa {
+    color: #E24444; }
+  .alert--primary .alert__title {
+    color: #E24444; }
+.alert--secondary {
+  background: white;
+  border: 2px solid #F78053; }
+  .alert--secondary .fa {
+    color: #F78053; }
+  .alert--secondary .alert__title {
+    color: #F78053; }
+.alert__icon {
+  margin-right: 1rem;
+  object-fit: contain;
+  align-self: flex-start; }
+.alert__content {
+  flex: 1 1 auto; }
+  .alert__content span {
+    display: block; }
+.alert__title {
+  font-weight: 600;
+  margin-bottom: 0.5rem; }
+.alert__info {
+  color: #989898; }
+
 @media (min-width: 576px) {
   .alertbox {
     padding: 1.5rem 1.5rem 1rem 1.5rem; }
@@ -195,6 +243,12 @@ a.noredlink {
 .spacer {
   display: block;
   padding-bottom: 2rem; }
+  .spacer:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
   .spacer.double {
     padding-bottom: 4rem; }
   .spacer.small {
@@ -369,7 +423,8 @@ MODALS
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-align: center; }
+  text-align: center;
+  box-sizing: border-box; }
   .button:hover, .button:active, .button:focus {
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
@@ -387,8 +442,22 @@ MODALS
     background: #16A57B;
     color: white; }
     .button.green:hover, .button.green:active, .button.green:focus {
-      background: #128765;
+      background: #16A57B;
       opacity: 0.85; }
+  .button.green-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    background: transparent;
+    color: #16A57B;
+    border: 2px solid #16A57B;
+    box-shadow: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem; }
+    .button.green-empty:hover, .button.green-empty:active, .button.green-empty:focus {
+      background: #16A57B;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-color: #16A57B; }
   .button.red-empty {
     background: transparent;
     color: #E24444;
@@ -400,6 +469,8 @@ MODALS
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border-color: #E24444; }
   .button.blue-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
     background: transparent;
     color: #063456;
     border: 2px solid #063456;
@@ -410,6 +481,8 @@ MODALS
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       border-color: #063456; }
   .button.white-empty {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
     background: transparent;
     color: white;
     border: 2px solid white;
@@ -435,6 +508,11 @@ MODALS
     .button.white-full:hover, .button.white-full:active, .button.white-full:focus {
       background-color: #f7f7f7;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22); }
+  .button__icon {
+    float: left;
+    display: inline-block;
+    width: 50px;
+    text-align: center; }
 
 .blue-background .button.yellow {
   box-shadow: 0 2px 4px black, 0 3px 4px black, 0 1px 5px black; }
@@ -452,15 +530,23 @@ button {
     display: inline-block;
     width: auto;
     font-size: 1.25rem;
-    padding: 0 3rem; }
-    .button.red-full {
-      line-height: 4rem; }
-    .button.red-empty {
-      line-height: 3.75rem; }
-    .button.yellow {
-      line-height: 3.5rem; }
-    .button.green {
-      line-height: 4rem; } }
+    padding-left: 3rem;
+    padding-right: 3rem;
+    /*&.red-full{
+        line-height:4rem;
+    } 
+    &.red-empty{
+        line-height:3.75rem;  
+    }
+    &.yellow{
+        line-height:3.5rem;  
+    }
+    &.green{
+        line-height:4rem;  
+    }
+    &.green-empty{
+        line-height:3.75rem;  
+    }*/ } }
 .container {
   max-width: 768px; }
 
@@ -547,29 +633,37 @@ button {
 #modal-continue .modal-body p span {
   display: block; }
 
-/*********************/
+.modal .button.yellow {
+  width: 100%; }
+
+/********* BOTTOM FIXED CTAs************/
 #bottom-fixed {
   width: 100%;
   position: fixed;
-  bottom: 0px; }
+  bottom: 0px;
+  background-color: white;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2); }
+  #bottom-fixed .button {
+    font-size: 1rem;
+    width: 100%; }
+  #bottom-fixed .col-6:first-child {
+    padding-right: 0.32rem; }
+  #bottom-fixed .col-6:last-child {
+    padding-left: 0.32rem; }
+  #bottom-fixed #bottom-ctas {
+    padding: 0.325rem 0.5rem; }
 
 #call-us {
-  width: 100%;
-  display: block;
-  background-color: #16A57B;
-  color: white;
-  padding: 0.725rem 0;
-  cursor: pointer;
-  -webkit-transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -o-transition: all .25s ease-in-out;
-  -ms-transform: all .25s ease-in-out;
-  transition: all .25s ease-in-out; }
-  #call-us:hover, #call-us:active, #call-us:focus {
-    background-color: #1ac391; }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
 
-.modal .button.yellow {
-  width: 100%; }
+#chat-with-us {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem; }
+  #chat-with-us i {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    font-size: 1.125rem; }
 
 /******  SECOND STEP  ******/
 .no-gutters.two-selectors .col-6:first-child {
@@ -578,10 +672,69 @@ button {
   padding-left: 5px; }
 
 p.option-caption {
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1rem; }
 
 .form-group.from-group-destination {
   margin-bottom: 0.5rem; }
+
+@media (max-width: 320px) {
+  .no-gutters.two-selectors .col-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%; }
+    .no-gutters.two-selectors .col-6:last-child {
+      padding-left: 0; }
+    .no-gutters.two-selectors .col-6 p.option-caption {
+      margin-bottom: 0.5rem; } }
+/*******
+MOBI SELECTOR 
+********/
+.mbsc-ios .mbsc-sc-itm {
+  font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem; }
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d {
+  font-size: 0.875rem; }
+
+.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
+  color: #373636; }
+
+.mbsc-ios.mbsc-fr-inline .mbsc-fr-w {
+  margin-top: 0;
+  background-color: #f7f7f7; }
+
+.mbsc-ios .mbsc-sc-whl-gr-c {
+  padding: 0; }
+
+.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
+  text-align: center; }
+
+.mbsc-ios .mbsc-sc-whl .mbsc-sel-gr {
+  font-weight: bold;
+  color: #D0D0D0;
+  font-size: 1.35rem; }
+
+.mbsc-ios .mbsc-sc-whl-gr {
+  max-width: 100% !important; }
+
+/******  RESERVE LIST FORM  ******/
+#reserve-list-form .inner {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D0D0D0; }
+#reserve-list-form form {
+  display: block;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D0D0D0; }
+#reserve-list-form input, #reserve-list-form .button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+#reserve-list-form .button {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {
@@ -594,6 +747,8 @@ p.option-caption {
     .add-on-info span.toggle-link {
       cursor: pointer;
       text-decoration: underline; }
+    .add-on-info span.original-price {
+      text-decoration: line-through; }
   .add-on-info p {
     font-size: 0.875rem;
     margin-bottom: 0;
@@ -641,18 +796,66 @@ p.option-caption {
 @media (min-width: 992px) {
   .payment-method .button {
     line-height: 2rem; } }
-/*******
-MOBI SELECTOR 
-********/
-.mbsc-ios .mbsc-sc-itm {
-  font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem; }
+/******  FIFTH STEP - LOGIN/REGISTER  ******/
+#login-register-buttons .button {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left; }
 
-.mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm-3d {
-  font-size: 0.875rem; }
+#or {
+  display: block; }
 
-.mbsc-ios .mbsc-sc-itm-sel, .mbsc-ios .mbsc-sc-whl-gr-3d .mbsc-sc-itm {
-  color: #373636; }
+/******  SIXTH AND SEVENTH STEP ******/
+#personal-details-form .input-group .input-group-prepend .custom-select {
+  border-right: 0.5px; }
+#personal-details-form .button {
+  margin-top: 2rem; }
+#personal-details-form .form-check-inline {
+  margin-right: 1rem;
+  margin-top: 0.25rem; }
+  #personal-details-form .form-check-inline label {
+    font-size: 0.875rem; }
+  #personal-details-form .form-check-inline input[type=radio] {
+    margin-top: 0.25rem;
+    margin-left: 0;
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -webkit-perspective: 1000;
+    -webkit-font-smoothing: subpixel-antialiased; }
+#personal-details-form .form-check input[type=checkbox] {
+  margin-top: 0.35rem;
+  margin-left: 0;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -webkit-perspective: 1000;
+  -webkit-font-smoothing: subpixel-antialiased; }
+#personal-details-form #birth-date .custom-select:first-child {
+  border-right: 0.5px; }
+#personal-details-form #birth-date .custom-select:last-child {
+  border-left: 0.5px; }
+
+@media (min-width: 769px) {
+  #personal-details-form .form-check label {
+    padding-left: 1.5rem; }
+  #personal-details-form .form-check input[type=radio] {
+    margin-top: 0.12rem; } }
+/* ONLY FIREFOX HACK */
+@-moz-document url-prefix() {}
+/* ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT - NOT 100% EFFECTIVE
+AS FOR CHROME IN DESKTOP WITH REDUCED WINDOW IS STILL NOT DIPLAYING CORRECTLY */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) and (min-width: 769px) {
+  #personal-details-form .form-check input[type=radio] {
+    transform: scale(1); }
+  #personal-details-form .form-check input[type=checkbox] {
+    transform: scale(1); } }
+/******  SIXTH AND SEVENTH STEP ******/
+#recap-page h5 {
+  margin-bottom: 0.25rem;
+  margin-top: 1.5rem; }
+#recap-page ul.checklist li {
+  margin-bottom: 0.5rem; }
 
 /******
 *******
@@ -661,6 +864,10 @@ SWITCHES
 ******/
 .containing-switch {
   border-bottom: 1px solid #f7f7f7; }
+  .containing-switch .row.icon {
+    margin-bottom: 0.5rem; }
+    .containing-switch .row.icon i {
+      font-size: 1.125rem; }
   .containing-switch.form-group {
     margin-bottom: 1.25rem;
     padding-bottom: 0.25rem; }
