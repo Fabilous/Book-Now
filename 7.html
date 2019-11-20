@@ -19,6 +19,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <!-- *********** ONLY LOADED IN THIS HTML!  -->
+        <link rel="stylesheet" href="dist/css/awesome-bootstrap-checkbox.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -96,15 +98,15 @@
                 </div>
                 <div class="form-group">
                     <label for="gender">Your gender</label>
-                  <div class="form-check form-check-inline">
+                  <div class="form-check form-check-inline radio">
                     <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
                     <label class="form-check-label" for="Female">Female</label>
                   </div>
-                  <div class="form-check form-check-inline">
+                  <div class="form-check form-check-inline radio">
                     <input class="form-check-input" type="radio" name="gender" id="Male" value="male">
                     <label class="form-check-label" for="Male">Male</label>
                   </div>
-                  <div class="form-check form-check-inline">
+                  <div class="form-check form-check-inline radio">
                     <input class="form-check-input" type="radio" name="gender" id="Non-binary" value="non-binary">
                     <label class="form-check-label" for="Non-binary">Non-binary</label>
                   </div>
@@ -126,15 +128,19 @@
                   <input type="number" class="form-control" id="postcode"> 
               </div>
 
-              <div class="form-check">
+              <div class="form-check checkbox">
                   <input type="checkbox" class="form-check-input" id="acceptance">
                   <label class="form-check-label" for="acceptance">You agree with all the <a href="#">terms and conditions</a> that you will never ever read.</label>
                 </div>
 
 
+              <div class="spacer small"></div>
+
               <a href="8.html" class="button yellow">Continue</a>
             </form>
           </div>
+
+
 
 
           <div class="spacer double"></div>

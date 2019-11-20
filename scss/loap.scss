@@ -422,10 +422,6 @@ MOBI SELECTOR
       font-size:0.875rem;
     }
   }
-  .form-check-input{
-    margin-left:0;
-    margin-top:.17rem;
-  }
   #birth-date{
     .custom-select{
       &:first-child{
@@ -435,6 +431,23 @@ MOBI SELECTOR
         border-left:0.5px;
       }
     }
+  }
+  /** Modifying  Awesome checkbox CSS**/
+  .radio label::before{
+    background-color:$bright-grey;
+    border:1px solid $less-bright-grey;
+    top:2px
+  }
+  .checkbox label::before{
+    background-color:$bright-grey;
+    border:1px solid $less-bright-grey;
+    top:4px;
+  }
+  .radio label::after{
+    top:5px;
+  }
+  .checkbox label::after{
+    top:3.5px;
   }
 }
 

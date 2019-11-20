@@ -806,22 +806,33 @@ MOBI SELECTOR
   display: block; }
 
 /******  SIXTH AND SEVENTH STEP ******/
-#personal-details-form .input-group .input-group-prepend .custom-select {
-  border-right: 0.5px; }
-#personal-details-form .button {
-  margin-top: 2rem; }
-#personal-details-form .form-check-inline {
-  margin-right: 1rem;
-  margin-top: 0.25rem; }
-  #personal-details-form .form-check-inline label {
-    font-size: 0.875rem; }
-#personal-details-form .form-check-input {
-  margin-left: 0;
-  margin-top: .17rem; }
-#personal-details-form #birth-date .custom-select:first-child {
-  border-right: 0.5px; }
-#personal-details-form #birth-date .custom-select:last-child {
-  border-left: 0.5px; }
+#personal-details-form {
+  /** Modifying  Awesome checkbox CSS**/ }
+  #personal-details-form .input-group .input-group-prepend .custom-select {
+    border-right: 0.5px; }
+  #personal-details-form .button {
+    margin-top: 2rem; }
+  #personal-details-form .form-check-inline {
+    margin-right: 1rem;
+    margin-top: 0.25rem; }
+    #personal-details-form .form-check-inline label {
+      font-size: 0.875rem; }
+  #personal-details-form #birth-date .custom-select:first-child {
+    border-right: 0.5px; }
+  #personal-details-form #birth-date .custom-select:last-child {
+    border-left: 0.5px; }
+  #personal-details-form .radio label::before {
+    background-color: #f7f7f7;
+    border: 1px solid #D0D0D0;
+    top: 2px; }
+  #personal-details-form .checkbox label::before {
+    background-color: #f7f7f7;
+    border: 1px solid #D0D0D0;
+    top: 4px; }
+  #personal-details-form .radio label::after {
+    top: 5px; }
+  #personal-details-form .checkbox label::after {
+    top: 3.5px; }
 
 /******  SIXTH AND SEVENTH STEP ******/
 #recap-page h5 {
