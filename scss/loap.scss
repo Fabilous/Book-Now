@@ -421,26 +421,10 @@ MOBI SELECTOR
     label{
       font-size:0.875rem;
     }
-    input[type=radio]{
-      margin-top:0.25rem;
-      margin-left:0;
-      transform: scale(1.25);
-      -webkit-transform: scale(1.25);
-      -ms-transform: scale(1.25);
-      -webkit-perspective: 1000;
-      -webkit-font-smoothing: subpixel-antialiased;
-    }
   }
-  .form-check{
-    input[type=checkbox]{
-      margin-top:0.35rem;
-      margin-left:0;
-      transform: scale(1.25);
-      -webkit-transform: scale(1.25);
-      -ms-transform: scale(1.25);
-      -webkit-perspective: 1000;
-      -webkit-font-smoothing: subpixel-antialiased;
-    }
+  .form-check-input{
+    margin-left:0;
+    margin-top:.17rem;
   }
   #birth-date{
     .custom-select{
@@ -454,39 +438,7 @@ MOBI SELECTOR
   }
 }
 
-@media (min-width: 769px) { 
-  #personal-details-form{
-    .form-check{
-      label{
-        padding-left:1.5rem;
-      }
-      input[type=radio]{
-        margin-top:0.12rem;
-      }
-    }
-  }
-}
 
-/* ONLY FIREFOX HACK */
-
-@-moz-document url-prefix() {
-      
-}
-
-/* ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT - NOT 100% EFFECTIVE
-AS FOR CHROME IN DESKTOP WITH REDUCED WINDOW IS STILL NOT DIPLAYING CORRECTLY */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (min-width: 769px){
-  #personal-details-form{
-    .form-check{
-      input[type=radio]{
-        transform: scale(1);
-      }
-      input[type=checkbox]{
-        transform: scale(1);
-      }
-    }
-  }
-}
 
 /******  SIXTH AND SEVENTH STEP ******/
 

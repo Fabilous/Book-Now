@@ -815,41 +815,14 @@ MOBI SELECTOR
   margin-top: 0.25rem; }
   #personal-details-form .form-check-inline label {
     font-size: 0.875rem; }
-  #personal-details-form .form-check-inline input[type=radio] {
-    margin-top: 0.25rem;
-    margin-left: 0;
-    transform: scale(1.25);
-    -webkit-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -webkit-perspective: 1000;
-    -webkit-font-smoothing: subpixel-antialiased; }
-#personal-details-form .form-check input[type=checkbox] {
-  margin-top: 0.35rem;
+#personal-details-form .form-check-input {
   margin-left: 0;
-  transform: scale(1.25);
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  -webkit-perspective: 1000;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  margin-top: .17rem; }
 #personal-details-form #birth-date .custom-select:first-child {
   border-right: 0.5px; }
 #personal-details-form #birth-date .custom-select:last-child {
   border-left: 0.5px; }
 
-@media (min-width: 769px) {
-  #personal-details-form .form-check label {
-    padding-left: 1.5rem; }
-  #personal-details-form .form-check input[type=radio] {
-    margin-top: 0.12rem; } }
-/* ONLY FIREFOX HACK */
-@-moz-document url-prefix() {}
-/* ONLY CHROME HACK FOR DISPLAY RADIO AND CHECKBOXES WITHOUT PIXELATING EFFECT - NOT 100% EFFECTIVE
-AS FOR CHROME IN DESKTOP WITH REDUCED WINDOW IS STILL NOT DIPLAYING CORRECTLY */
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) and (min-width: 769px) {
-  #personal-details-form .form-check input[type=radio] {
-    transform: scale(1); }
-  #personal-details-form .form-check input[type=checkbox] {
-    transform: scale(1); } }
 /******  SIXTH AND SEVENTH STEP ******/
 #recap-page h5 {
   margin-bottom: 0.25rem;
