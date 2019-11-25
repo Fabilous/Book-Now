@@ -665,6 +665,40 @@ button {
     font-weight: 400;
     font-size: 1.125rem; }
 
+/********    FOOTER    ************/
+#main-footer {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem; }
+  #main-footer__logo {
+    margin-bottom: 1rem; }
+  #main-footer__title {
+    color: #063456;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem; }
+  #main-footer__features {
+    margin-bottom: 1rem; }
+  #main-footer .fa-check {
+    color: #FFCD00;
+    margin-right: 0.35rem; }
+  #main-footer .stars {
+    display: block;
+    margin-bottom: 0.25rem; }
+    #main-footer .stars i {
+      color: #FFCD00; }
+  #main-footer .review-text {
+    font-style: italic; }
+  #main-footer .review-author-school {
+    display: inline-block; }
+  #main-footer .info-title {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600; }
+  #main-footer .info-address span {
+    display: block; }
+
 /******  SECOND STEP  ******/
 .no-gutters.two-selectors .col-6:first-child {
   padding-right: 5px; }

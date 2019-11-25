@@ -182,6 +182,53 @@
 }
 
 
+/********    FOOTER    ************/
+#main-footer{
+  padding-top:2.5rem;
+  padding-bottom:5rem;
+  &__logo{
+    margin-bottom:1rem;
+  }
+  &__title{
+    color:$blue;
+    font-weight:600;
+    font-size:1.125rem;
+    margin-bottom:1.5rem;
+  }
+  &__features{
+    margin-bottom:1rem;
+  }
+  .fa-check{
+    color:$yellow;
+    margin-right:0.35rem;
+  }
+  .stars{
+    display:block;
+    margin-bottom:0.25rem;
+    i{
+      color:$yellow;
+    }
+  }
+  .review-text{
+    font-style:italic;
+  }
+  .review-author-school{
+    display:inline-block;
+  }
+  .info-title{
+    display:block;
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+    font-size:1.125rem;
+    font-weight:600;
+  }
+  .info-address{
+    span{
+      display:block;
+    }
+  }
+}
+
 
 
 /******  SECOND STEP  ******/
