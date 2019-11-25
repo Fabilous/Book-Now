@@ -694,6 +694,7 @@ button {
     display: block;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    font-size: 1.125rem;
     font-weight: 600; }
   #main-footer .info-address span {
     display: block; }
