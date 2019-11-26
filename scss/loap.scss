@@ -2,6 +2,21 @@
 	max-width:768px;
 }
 
+.main-content{
+  padding-bottom:2.5rem;
+}
+
+h2{
+  margin-bottom:2rem;
+  &.smaller-margin{
+    margin-bottom:1rem;
+  }
+}
+
+.button-continue{
+  margin-top:2rem;
+  margin-bottom:2rem;
+}
 /****** SELECT 2 *****/
 
 .select2-container{
@@ -401,8 +416,13 @@ MOBI SELECTOR
 
 /******  FORTH STEP - PAYMENT SECTION  ******/
 
+#payment-options-img{
+  margin-bottom:1rem;
+}
+
 .payment-method{
   padding:0.875rem;
+  padding-top:1.875rem;
   margin-bottom:1.25rem;
   background-color:#fdfdfd; 
   border:1px solid #dbdbdb;
@@ -410,6 +430,8 @@ MOBI SELECTOR
   .button{
     padding-bottom:0.875rem;
     padding-top:0.875rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
   }
 }
 
@@ -434,15 +456,12 @@ MOBI SELECTOR
 
 
 #login-register-buttons{
+  margin-bottom:2rem;
   .button{
     width:100%;
     margin-bottom:1rem;
     text-align:left;
   }
-}
-
-#or{
-  display:block;
 }
 
 
@@ -512,10 +531,6 @@ MOBI SELECTOR
     }
   }
 }
-
-
-
-
 
 
 
