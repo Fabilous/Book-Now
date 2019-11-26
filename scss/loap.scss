@@ -102,7 +102,8 @@
 #recap{
 	.inner{
 		padding:0.5rem;
-		border:2px dotted $less-bright-grey;
+    border:2px dotted $less-bright-grey;
+    margin-bottom:2rem;
 		p{
 			font-size:0.875rem;
 			line-height:1rem;
@@ -392,6 +393,10 @@ MOBI SELECTOR
           }
       }
   }
+}
+
+#extra-price-container{
+  padding-bottom:6rem;
 }
 
 /******  FORTH STEP - PAYMENT SECTION  ******/

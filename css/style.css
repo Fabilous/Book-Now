@@ -614,7 +614,8 @@ button {
 /********* RECURRENT COMPONENTS *********/
 #recap .inner {
   padding: 0.5rem;
-  border: 2px dotted #D0D0D0; }
+  border: 2px dotted #D0D0D0;
+  margin-bottom: 2rem; }
   #recap .inner p {
     font-size: 0.875rem;
     line-height: 1rem;
@@ -807,6 +808,9 @@ MOBI SELECTOR
     line-height: 1rem; }
     #price-box .secondary-price .label.secondary {
       font-weight: 400; }
+
+#extra-price-container {
+  padding-bottom: 6rem; }
 
 /******  FORTH STEP - PAYMENT SECTION  ******/
 .payment-method {
