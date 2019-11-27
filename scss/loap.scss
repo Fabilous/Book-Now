@@ -17,11 +17,105 @@ h2{
   margin-top:2rem;
   margin-bottom:2rem;
 }
+
+/** LOGIN-REGISTER TOP MENU **/
+#login-link{
+  display:inline-block;
+  padding:0.5rem 0.75rem;
+  border:1px solid $less-bright-grey;
+  color: $less-bright-grey;
+  border-radius:8px;
+  @include transition-one();
+  cursor:pointer;
+  &:hover,&:focus,&:active{
+    background:$less-bright-grey;
+    color:white;
+  }
+}
+
+#logged-link{
+  display:inline-block;
+  padding:0.5rem 1.75rem;
+  border:1px solid $blue;
+  color:$blue;
+  border-radius:8px;
+  @include transition-one();
+  cursor:pointer;
+  &:hover,&:focus,&:active{
+    background:$blue;
+    color:white;
+  }
+}
+
+#header{
+  &.with-dropdown{
+    .dropdown-menu{
+      border-color:$blue;
+      border-radius:8px;
+      padding-top:0;
+      padding-bottom:0;
+      .dropdown-divider{
+        margin:0;
+      }
+      .dropdown-item{
+        @include transition-one();
+        padding-top:0.75rem;
+        padding-bottom:0.75rem;
+        font-size:0.875rem;
+        &:focus,&:hover{
+          background:$blue;
+          color:white;
+        }
+        &:first-child{
+          border-radius:8px 8px 0 0;
+        }
+        &:last-child{
+          border-radius:0 0 8px 8px;
+        }
+      }
+    }
+  }
+}
+.show > .dropdown-menu {
+  animation-name: slidenavAnimation;
+  animation-duration:.35s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-name: slidenavAnimation;
+  -webkit-animation-duration:.35s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+
+  -moz-animation-name: slidenavAnimation;
+  -moz-animation-duration:.35s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: forwards;
+}
+@keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /****** SELECT 2 *****/
 
 .select2-container{
 	height:44px;
-	
         .select2-selection--single{
             border:none;
                 .select2-selection__arrow{
@@ -40,7 +134,6 @@ h2{
                     padding:0 1rem;
                 }
             }
-            
             .select2-selection--multiple{
             border:none;
             height:44px;
@@ -72,7 +165,6 @@ h2{
                     }
                 }
             }
-            
     &.select2-container--default{
     	.select2-results>.select2-results__options{
     		background-color:$bright-grey;
@@ -87,7 +179,6 @@ h2{
             color:#bbb;
         }
     }
-
     .select2-results__option{
       padding-left:1rem;
     }
