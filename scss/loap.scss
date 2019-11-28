@@ -617,9 +617,17 @@ MOBI SELECTOR
       color:green;
     }
   }
-  h5{
-    margin-bottom:0.25rem;
+  section{
     margin-top:1.5rem;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+  p{
+    margin-bottom:0.25rem;
+  }
+  h5{
+    margin-bottom:0.5rem;
   }
   .price{
     font-weight:bold;

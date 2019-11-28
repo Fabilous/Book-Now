@@ -971,9 +971,14 @@ MOBI SELECTOR
 /******  SIXTH AND SEVENTH STEP ******/
 #recap-page .confirmation-sidebar .fa-check {
   color: green; }
-#recap-page h5 {
-  margin-bottom: 0.25rem;
+#recap-page section {
   margin-top: 1.5rem; }
+  #recap-page section:first-child {
+    margin-top: 0; }
+#recap-page p {
+  margin-bottom: 0.25rem; }
+#recap-page h5 {
+  margin-bottom: 0.5rem; }
 #recap-page .price {
   font-weight: bold; }
 #recap-page ul.checklist li {
