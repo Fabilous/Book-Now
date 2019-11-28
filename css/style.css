@@ -969,9 +969,13 @@ MOBI SELECTOR
     top: 3.5px; }
 
 /******  SIXTH AND SEVENTH STEP ******/
+#recap-page .confirmation-sidebar .fa-check {
+  color: green; }
 #recap-page h5 {
   margin-bottom: 0.25rem;
   margin-top: 1.5rem; }
+#recap-page .price {
+  font-weight: bold; }
 #recap-page ul.checklist li {
   margin-bottom: 0.5rem; }
 

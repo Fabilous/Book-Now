@@ -612,9 +612,17 @@ MOBI SELECTOR
 /******  SIXTH AND SEVENTH STEP ******/
 
 #recap-page{
+  .confirmation-sidebar{
+    .fa-check{
+      color:green;
+    }
+  }
   h5{
     margin-bottom:0.25rem;
     margin-top:1.5rem;
+  }
+  .price{
+    font-weight:bold;
   }
   ul.checklist{
     li{
@@ -626,6 +634,8 @@ MOBI SELECTOR
 #login-form{
   margin-bottom:2rem;
 }
+
+
 
 /******
 *******
