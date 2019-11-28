@@ -983,6 +983,9 @@ MOBI SELECTOR
   font-weight: bold; }
 #recap-page ul.checklist li {
   margin-bottom: 0.5rem; }
+#recap-page .button.red-empty {
+  margin-top: 3rem;
+  font-size: 1rem; }
 
 #login-form {
   margin-bottom: 2rem; }
