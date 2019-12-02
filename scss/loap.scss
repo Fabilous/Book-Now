@@ -484,11 +484,11 @@ MOBI SELECTOR
       font-weight:600;
   }
   .price{
-      font-size:1.5rem;
       font-weight:600;
   }
   .main-price{
       margin-bottom:0.5rem;
+      font-size:1.5rem;
   }
   .secondary-price{
       .label{
@@ -510,6 +510,7 @@ MOBI SELECTOR
 
 #payment-options-img{
   margin-bottom:1rem;
+  max-height:40px;
 }
 
 .payment-method{
@@ -525,12 +526,6 @@ MOBI SELECTOR
     margin-top:2rem;
     margin-bottom:1rem;
   }
-}
-
-@media (min-width: 400px) { 
-    #payment-options-img{
-      max-width:305px;
-    }
 }
 
 @media (min-width: 992px) {

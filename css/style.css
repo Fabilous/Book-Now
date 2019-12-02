@@ -895,10 +895,10 @@ MOBI SELECTOR
     padding-top: 0.5rem;
     font-weight: 600; }
   #price-box .price {
-    font-size: 1.5rem;
     font-weight: 600; }
   #price-box .main-price {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem; }
   #price-box .secondary-price .label {
     padding-top: 0;
     font-size: 0.785rem;
@@ -911,7 +911,8 @@ MOBI SELECTOR
 
 /******  FORTH STEP - PAYMENT SECTION  ******/
 #payment-options-img {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  max-height: 40px; }
 
 .payment-method {
   padding: 0.875rem;
@@ -926,9 +927,6 @@ MOBI SELECTOR
     margin-top: 2rem;
     margin-bottom: 1rem; }
 
-@media (min-width: 400px) {
-  #payment-options-img {
-    max-width: 305px; } }
 @media (min-width: 992px) {
   .payment-method .button {
     line-height: 2rem; } }
