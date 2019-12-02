@@ -355,6 +355,26 @@ p.option-caption{
   margin-bottom:0.5rem;
 }
 
+#presenting-installments{
+   padding:0.5rem 0.75rem;
+   margin-top:0.5rem;
+    border:1px solid $less-bright-grey;
+    border-radius:0.25rem;
+    span{
+      display:block;
+      &.label{
+        font-size:0.875rem;
+      }
+      &.explanation{
+        font-size:0.75rem;
+        color:$middle-grey;
+      }
+      &#installment-price{
+        font-size:0.875rem;
+      }
+    }
+}
+
 @media (max-width: 320px) { 
   .no-gutters.two-selectors{
     .col-6{
@@ -437,6 +457,9 @@ MOBI SELECTOR
     margin-top:1rem;
     margin-bottom:0.5rem;
     font-size:1rem;
+  }
+  .custom-select{
+    border-right:0;
   }
 }
 

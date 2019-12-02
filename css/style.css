@@ -127,6 +127,9 @@ form .input-group .input-group-append button {
   border-left: none;
   background-color: #063456;
   color: white; }
+form .input-group .input-group-prepend .custom-select:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 form .input-group .custom-select {
   background-color: #f7f7f7;
   border: 1px solid #D0D0D0;
@@ -805,6 +808,21 @@ p.option-caption {
 .form-group.from-group-destination {
   margin-bottom: 0.5rem; }
 
+#presenting-installments {
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #D0D0D0;
+  border-radius: 0.25rem; }
+  #presenting-installments span {
+    display: block; }
+    #presenting-installments span.label {
+      font-size: 0.875rem; }
+    #presenting-installments span.explanation {
+      font-size: 0.75rem;
+      color: #989898; }
+    #presenting-installments span#installment-price {
+      font-size: 0.875rem; }
+
 @media (max-width: 320px) {
   .no-gutters.two-selectors .col-6 {
     width: 100%;
@@ -862,6 +880,8 @@ MOBI SELECTOR
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1rem; }
+#reserve-list-form .custom-select {
+  border-right: 0; }
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {

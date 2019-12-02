@@ -180,6 +180,14 @@ form{
                 color:white;
             }
         }
+        .input-group-prepend{
+            .custom-select{
+                &:last-child{
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;   
+                }
+            }
+        }
         .custom-select{
                 background-color:$bright-grey;
                 border:1px solid $less-bright-grey;
