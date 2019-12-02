@@ -219,6 +219,7 @@ h2{
 				a{
 					font-weight:400;
           color:$text-grey;
+          text-decoration:underline;
           &::after{
             background:none;
             display:none;

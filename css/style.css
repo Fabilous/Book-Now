@@ -720,7 +720,8 @@ h2 {
       font-weight: 700; }
       #recap .inner p.recap-selection a {
         font-weight: 400;
-        color: #373636; }
+        color: #373636;
+        text-decoration: underline; }
         #recap .inner p.recap-selection a::after {
           background: none;
           display: none; }
