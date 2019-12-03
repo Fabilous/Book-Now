@@ -144,6 +144,35 @@ MODALS
 }
 
 
+/**
+NAV TABS
+**/
+
+.nav-tabs{
+    border-bottom: 1px solid $blue;
+    .nav-link{
+        color:$middle-grey;
+        &.active{
+            border-color: $blue $blue #fff;
+            border-width:1px;
+        }
+    }
+}
+
+/**
+PILLS TAB
+***/
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link{
+ background-color:$blue;   
+ border-radius:8px;
+}
+
+.nav-pills{
+    .nav-link{
+        color:$middle-grey;
+    }
+} 
+
 /*******
 FORMS 
 ********/
