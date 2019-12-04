@@ -89,7 +89,7 @@
       <div class="form-group">
           <label for="language-selection"><strong>Course language</strong></label>
           <p class="option-caption">Preferred language</p>
-          <select class="select-type-one form-control" name="language-selection" style="width:100%">
+          <select class="select-type-one form-control" name="language-selection" style="width:100%" id="language-selection">
             <option value="1">English</option>
             <option value="2">Danish</option>
             <option value="3">Finnish</option>
@@ -106,7 +106,7 @@
       <div class="form-group from-group-destination">
               <label for="destination-selection"><strong>Destination</strong></label>
               <p class="option-caption price-changing" id="prices-from">Prices from 1940€</p>
-        <select class="select-type-one form-control" id="destination-select" onchange="myFunction()">
+        <select class="select-type-one form-control" id="destination-selection" onchange="myFunction()">
           <option value="1940">Amsterdam</option>
           <option value="2340">Bad Gastein</option>
           <option value="2040">Barcelona</option>
@@ -140,7 +140,7 @@
                   <div class="mbsc-form-group form-group">
                       <label for="dates-selection"><strong>Course dates and hours</strong></label>
                       <div>
-                          <select name="dates-selection" id="demo-inline" data-enhance="false">
+                          <select name="dates-selection" id="dates-selection" data-enhance="false">
                               <optgroup label="2019">
                                   <option disabled>07 Oct - 01 Nov (9:00 - 15:00)</option>
                                   <option>04 Nov - 29 Nov (9:00 - 15:00)</option>
@@ -302,7 +302,7 @@
     </div>
   </div>
 
-    <!-- MODALS -->
+  <!-- MODALS -->
    <!-- Login Register Modal -->
    <div class="modal fade" id="login-register-modal" tabindex="-1" role="dialog" aria-labelledby="login-register-title" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -320,7 +320,7 @@
                   <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login-content" role="tab" aria-controls="login-content" aria-selected="true">Log in</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="register-tab" data-toggle="tab" href="#register-content" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                  <a class="nav-link" id="register-tab" data-toggle="tab" href="#register-content" role="tab" aria-controls="register-content" aria-selected="false">Register</a>
                 </li>
               </ul>
 
@@ -329,7 +329,7 @@
                         <!-- login content -->
                         <div class="tab-pane fade show active" id="login-content" role="tabpanel" aria-labelledby="login-tab">
 
-                            <div id="login-register-buttons">
+                            <div class="login-register-buttons">
                                 <a href="6.html" class="button blue-full">
                                     <span class="button__icon"><i class="fab fa-facebook"></i></span>
                                     Log in with Facebook
@@ -361,7 +361,7 @@
                         <div class="tab-pane fade" id="register-content" role="tabpanel" aria-labelledby="register-tab">
 
 
-                            <div id="login-register-buttons">
+                            <div class="login-register-buttons">
                                 <a href="6.html" class="button blue-full">
                                     <span class="button__icon"><i class="fab fa-facebook"></i></span>
                                     Register with Facebook
@@ -377,7 +377,7 @@
                               <p class="text-center mb-4 mt-4">or register with your email</p>
                   
                   
-                              <form id="login-form">
+                              <form id="register-form">
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="register-email" placeholder="Your Email"> 
                                 </div>
@@ -397,6 +397,7 @@
       </div>
     </div>
   </div><!-- END // Login Register Modal -->
+
     
 
     <!-- Optional JavaScript -->
@@ -468,7 +469,7 @@
         });
     
         // Mobiscroll Select initialization
-        $('#demo-inline').mobiscroll().select({
+        $('#dates-selection').mobiscroll().select({
             display: 'inline',  // Specify display mode like: display: 'bottom' or omit setting to use default
             showInput: false    // More info about showInput: https://docs.mobiscroll.com/4-8-3/select#opt-showInput
         });
@@ -496,7 +497,7 @@
       var destination = e.options[e.selectedIndex].text;
       sessionStorage.setItem("next-destination", destination);
       
-      var f = document.getElementById("demo-inline");
+      var f = document.getElementById("dates-selection");
       var destination = f.options[f.selectedIndex].text;
       sessionStorage.setItem("next-date", destination);
     }

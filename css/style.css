@@ -983,7 +983,7 @@ MOBI SELECTOR
   .payment-method .button {
     line-height: 2rem; } }
 /******  FIFTH STEP - LOGIN/REGISTER  ******/
-#login-register-buttons .button {
+.login-register-buttons .button {
   width: 100%;
   margin-bottom: 1rem;
   text-align: left; }
