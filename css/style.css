@@ -101,6 +101,27 @@ MODALS
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
 
+/**
+NAV TABS
+**/
+.nav-tabs {
+  border-bottom: 1px solid #063456; }
+  .nav-tabs .nav-link {
+    color: #989898; }
+    .nav-tabs .nav-link.active {
+      border-color: #063456 #063456 #fff;
+      border-width: 1px; }
+
+/**
+PILLS TAB
+***/
+.nav-pills .nav-link.active, .show > .nav-pills .nav-link {
+  background-color: #063456;
+  border-radius: 8px; }
+
+.nav-pills .nav-link {
+  color: #989898; }
+
 /*******
 FORMS 
 ********/
@@ -648,6 +669,16 @@ h2 {
     opacity: 0; }
   to {
     opacity: 1; } }
+/********
+LOGIN - REGISTER MODAL
+*********/
+#login-register-modal button.modal-close-button {
+  background: transparent;
+  color: #989898;
+  text-decoration: underline; }
+#login-register-modal .button {
+  width: 100%; }
+
 /****** SELECT 2 *****/
 .select2-container {
   height: 44px; }
@@ -811,7 +842,8 @@ p.option-caption {
 #presenting-installments {
   padding: 0.5rem 0.75rem;
   margin-top: 0.5rem;
-  border: 1px solid #D0D0D0;
+  border: 1px solid #063456;
+  background-color: #f7f7f7;
   border-radius: 0.25rem; }
   #presenting-installments span {
     display: block; }
@@ -951,12 +983,10 @@ MOBI SELECTOR
   .payment-method .button {
     line-height: 2rem; } }
 /******  FIFTH STEP - LOGIN/REGISTER  ******/
-#login-register-buttons {
-  margin-bottom: 2rem; }
-  #login-register-buttons .button {
-    width: 100%;
-    margin-bottom: 1rem;
-    text-align: left; }
+#login-register-buttons .button {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left; }
 
 /******  SIXTH AND SEVENTH STEP ******/
 #personal-details-form {
