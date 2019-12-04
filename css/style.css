@@ -676,6 +676,8 @@ LOGIN - REGISTER MODAL
   background: transparent;
   color: #989898;
   text-decoration: underline; }
+#login-register-modal .button {
+  width: 100%; }
 
 /****** SELECT 2 *****/
 .select2-container {

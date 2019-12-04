@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>7 - Personal Details 2</title>
+    <title>8 - Recap!</title>
     <meta name="description" content="LOAP is COOL">
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -19,8 +19,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-        <!-- *********** ONLY LOADED IN THIS HTML!  -->
-        <link rel="stylesheet" href="dist/css/awesome-bootstrap-checkbox.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -28,30 +26,28 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
     
-    <script src="https://kit.fontawesome.com/8619c2cc20.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     
     <!-- Extra Tags -->
     <meta property="og:image" content="assets/img/shake-your-future-og.jpg"/>
     <meta property="og:description" content="LOAP is COOL" />
 
     
-
-      
   </head>
   <body>
     
-      <div class="up-1" id="header">
-          <div class="container">
-              <div class="row align-items-center">
-                  <div class="col-8">
-                      <img src="assets/img/ebs-logo.svg" alt="EBS logo" class="img-fluid" id="logo">
-                  </div>
-                  <div class="col-4 text-right">
-                   <a href="#" id="login-link">Login</a>
-                  </div>
+    <div class="up-1" id="header">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-8">
+                  <img src="assets/img/ebs-logo.svg" alt="EBS logo" class="img-fluid" id="logo">
+              </div>
+              <div class="col-4 text-right">
+               <a href="#" id="login-link" data-toggle="modal" data-target="#login-register-modal">Login</a>
               </div>
           </div>
       </div>
+    </div>
     
     <div class="main-content">
       
@@ -60,99 +56,124 @@
       
     <!-- main content start -->
         
-      <div class="container">
+      <div class="container" id="recap-page">
         
+              <!-- recap -->
 
-
-
-
-    <div class="row">
-      <div class="col-12">    
-          <h2 class="smaller-margin">Hi, yourName!</h2>
-          <h4>Please, complete your data for registration.</h4>
-
-
-          <div id="personal-details-form">
-            <form>
-                <div class="form-group">
-                    <label for="birthDate">Your birth date</label>
-                  <div class="input-group" id="birth-date">
-                      <select class="custom-select form-control" id="year">
-                          <option selected>Year</option>
-                          <option value="1">1987</option>
-                          <option value="2">1986</option>
-                          <option value="3">1989</option>
-                      </select>
-                    <select class="custom-select form-control" id="month">
-                        <option selected>Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                    </select>
-                    <select class="custom-select form-control" id="day">
-                        <option selected>Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                      
+              <div class="row">
+                  <div class="col-12">    
+                      <h2 class="mb-3">Your booking has been confirmed</h2>
+                      <p class="lead">Yey YourName!</p>
                   </div>
                 </div>
-                <div class="form-group">
-                    <label for="gender">Your gender</label>
-                  <div class="form-check form-check-inline radio">
-                    <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
-                    <label class="form-check-label" for="Female">Female</label>
-                  </div>
-                  <div class="form-check form-check-inline radio">
-                    <input class="form-check-input" type="radio" name="gender" id="Male" value="male">
-                    <label class="form-check-label" for="Male">Male</label>
-                  </div>
-                  <div class="form-check form-check-inline radio">
-                    <input class="form-check-input" type="radio" name="gender" id="Non-binary" value="non-binary">
-                    <label class="form-check-label" for="Non-binary">Non-binary</label>
-                  </div>
-                </div>
-              <div class="form-group">
-                    <label for="postcode">Your country of residence</label>
-                    <input type="text" class="form-control" id="postcode"> 
-              </div>
-              <div class="form-group">
-                  <label for="city">The city where you live</label>
-                  <input type="text" class="form-control" id="city"> 
-              </div>
-              <div class="form-group">
-                  <label for="firstName">Your address</label>
-                  <input type="text" class="form-control" id="address"> 
-              </div>
-              <div class="form-group">
-                  <label for="postcode">Your postcode</label>
-                  <input type="number" class="form-control" id="postcode"> 
-              </div>
-
-              <div class="form-check checkbox">
-                  <input type="checkbox" class="form-check-input" id="acceptance">
-                  <label class="form-check-label" for="acceptance">You agree with all the <a href="#">terms and conditions</a> that you will never ever read.</label>
-                </div>
 
 
-              <a href="8.html" class="button yellow button-continue">Continue</a>
-            </form>
+
+
+    <div class="row mt-5">
+        <div class="col-md-6 order-md-2 mb-4 confirmation-sidebar">  
+
+          <div class="inner grey-background rounded">
+            
+              <div class="p-3">
+
+                <section>
+                  <p><i class="fa fa-check"></i> Payment confirmed!</p>
+                </section>
+
+                <section>
+                  <h5>Grand total</h5>
+                  <p><span class="price">1865€</span></p>
+                </section>
+        
+                <section>
+                  <h5>Payment in 3 installments</h5>
+                  <ul>
+                    <li>11 May : <span class="price">865€</span></li>
+                    <li>18 May : <span class="price">865€</span></li>
+                    <li>27 May : <span class="price">865€</span></li>
+                  </ul>
+                </section>
+
+
+              </div>
+
           </div>
 
 
       </div>
+
+      <div class="col-md-6 order-md-1">
+
+          <section>
+            <h5>Course</h5>
+            <p>International Bartender Course</p>
+          </section>
+
+          <section>
+            <h5>Destination</h5>
+            <p>London</p>
+          </section>
+
+          <section>
+            <h5>Dates</h5>
+            <p>02 Apr 2018 - 20 Apr 2018</p>
+          </section>
+
+          <section>
+            <h5>Extra options</h5>
+            <p><ul class="checklist">
+              <li><span class="icon"></span>100hs of course</li>
+              <li><span class="icon"></span>3 weeks accomodation</li>
+              <li><span class="icon"></span>2 day mixology course</li>
+              <li><span class="icon"></span>Cancellation insurance</li>
+            </ul>
+          </section>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 pt-4 pb-3">
+            <hr>
+            <section>
+              <h5>Your reference code</h5>
+              <p>70328</p>
+              </section>
+            <section>
+                <h5>The status of your booking</h5>
+                <p>Booking confirmed</p>
+            </section>
+            <section>
+                <a href="#" class="button red-empty">Go to your student account</a>
+            </section>
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 pt-4 pb-3">
+            <hr>
+            <section>
+              <h5>Need help?</h5>
+              <p>Please <a href="">call us at +4433222920</a> or write us an email to <a href="mailto:info@barschool.net">info@barschool.net</a>.</p>
+            </section>
+        </div>
+
     </div>
  
-
-
-
-
 
             
         </div>
         <!-- end container-->
     
-        
+
       </div>
       <!-- main content-ends -->
    
@@ -226,7 +247,7 @@
 
 
    <!-- CALL US -->
-   <div id="bottom-fixed">
+  <div id="bottom-fixed">
     <div class="container" id="bottom-ctas">
       <div class="row">
         <div class="col-6">
@@ -248,6 +269,104 @@
       </div>
     </div>
   </div>
+
+
+    <!-- MODALS -->
+   <!-- Login Register Modal -->
+   <div class="modal fade" id="login-register-modal" tabindex="-1" role="dialog" aria-labelledby="login-register-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="login-register-title">Log in or Sign up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login-content" role="tab" aria-controls="login-content" aria-selected="true">Log in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="register-tab" data-toggle="tab" href="#register-content" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                </li>
+              </ul>
+
+                    <!-- tab content -->
+                    <div class="tab-content" id="myTabContent">
+                        <!-- login content -->
+                        <div class="tab-pane fade show active" id="login-content" role="tabpanel" aria-labelledby="login-tab">
+
+                            <div id="login-register-buttons">
+                                <a href="6.html" class="button blue-full">
+                                    <span class="button__icon"><i class="fab fa-facebook"></i></span>
+                                    Log in with Facebook
+                                </a>     
+                    
+                                <a href="6.html" class="button blue-full">
+                                    <span class="button__icon"><i class="fab fa-google"></i></span>
+                                    Log in with Google
+                                </a>  
+                            </div>
+                  
+                  
+                            <p class="text-center mb-4 mt-4">or log in with your email</p>
+                  
+                  
+                            <form id="login-form">
+                              <div class="form-group">
+                                  <input type="email" class="form-control" id="login-email" placeholder="Your Email"> 
+                              </div>
+                              <div class="form-group">
+                                  <input type="password" class="form-control" id="login-password" placeholder="Your Password"> 
+                              </div>
+                              <input type="submit" class="button blue-full" value="Login">
+                            </form>
+
+                        </div><!-- end login content -->
+                        
+                        <!-- register content -->
+                        <div class="tab-pane fade" id="register-content" role="tabpanel" aria-labelledby="register-tab">
+
+
+                            <div id="login-register-buttons">
+                                <a href="6.html" class="button blue-full">
+                                    <span class="button__icon"><i class="fab fa-facebook"></i></span>
+                                    Register with Facebook
+                                </a>     
+                    
+                                <a href="6.html" class="button blue-full">
+                                    <span class="button__icon"><i class="fab fa-google"></i></span>
+                                    Register with Google
+                                </a>  
+                    
+                              </div>
+
+                              <p class="text-center mb-4 mt-4">or register with your email</p>
+                  
+                  
+                              <form id="login-form">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="register-email" placeholder="Your Email"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="register-password" placeholder="Choose a Password"> 
+                                </div>
+                                <input type="submit" class="button blue-full" value="Register">
+                              </form>
+
+                        </div><!-- end register content -->
+                    </div><!-- end tab content -->
+                    
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="modal-close-button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- END // Login Register Modal -->
+
 
 
 
