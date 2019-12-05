@@ -1012,6 +1012,8 @@ MOBI SELECTOR
     border-right: 0.5px; }
   #personal-details-form #birth-date .custom-select:last-child {
     border-left: 0.5px; }
+  #personal-details-form .date-label {
+    font-size: 0.875rem; }
   #personal-details-form .radio label::before {
     background-color: #f7f7f7;
     border: 1px solid #D0D0D0;
