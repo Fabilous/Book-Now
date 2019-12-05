@@ -764,7 +764,7 @@ LOGIN - REGISTER MODAL
 #modal-continue .modal-body p span {
   display: block; }
 
-.modal .button.yellow {
+.modal .button {
   width: 100%; }
 
 /********* BOTTOM FIXED CTAs************/
@@ -896,24 +896,32 @@ MOBI SELECTOR
   max-width: 100% !important; }
 
 /******  RESERVE LIST FORM  ******/
-#reserve-list-form .inner {
-  margin-top: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #D0D0D0; }
-#reserve-list-form form {
-  display: block;
-  margin-top: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #D0D0D0; }
-#reserve-list-form input, #reserve-list-form .button {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-#reserve-list-form .button {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 1rem; }
-#reserve-list-form .custom-select {
-  border-right: 0; }
+/*#reserve-list-form{
+  .inner{
+    margin-top:0.5rem;
+    padding-top:1rem;
+    border-top:1px solid $less-bright-grey;
+  }
+  form{
+    display:block;
+    margin-top:0.5rem;
+    padding-top:1rem;
+    border-top:1px solid $less-bright-grey;
+  }
+  input,.button{
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+  }
+  .button{
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+    font-size:1rem;
+  }
+  .custom-select{
+    border-right:0;
+  }
+}/*
+
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
 .add-on-info {

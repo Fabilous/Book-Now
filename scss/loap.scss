@@ -260,7 +260,7 @@ LOGIN - REGISTER MODAL
 }
 
 .modal{
-  .button.yellow{
+  .button{
       width:100%;
   }
 }
@@ -459,7 +459,7 @@ MOBI SELECTOR
 
 /******  RESERVE LIST FORM  ******/
 
-#reserve-list-form{
+/*#reserve-list-form{
   .inner{
     margin-top:0.5rem;
     padding-top:1rem;
@@ -483,7 +483,7 @@ MOBI SELECTOR
   .custom-select{
     border-right:0;
   }
-}
+}/*
 
 
 /******  THIRD STEP - EXTRA-OPTIONS-PAGE  ******/
