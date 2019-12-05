@@ -657,6 +657,11 @@ MOBI SELECTOR
     .fa-check{
       color:green;
     }
+    .payment-confirmed{
+      color:green;
+      padding:5px;
+      background:white;
+    }
   }
   section{
     margin-top:1.5rem;
@@ -684,7 +689,7 @@ MOBI SELECTOR
   }
 }
 
-#login-form{
+#login-form,#register-form{
   margin-bottom:2rem;
 }
 

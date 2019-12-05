@@ -86,7 +86,7 @@
       <div class="form-group">
           <label for="language-selection"><strong>Course language</strong></label>
           <p class="option-caption">Preferred language</p>
-          <select class="select-type-one form-control" name="language-selection" style="width:100%">
+          <select class="select-type-one form-control" name="language-selection" id="language-selection" style="width:100%">
             <option value="1">English</option>
             <option value="2">Danish</option>
             <option value="3">Finnish</option>
@@ -103,7 +103,7 @@
       <div class="form-group from-group-destination">
               <label for="destination-selection"><strong>Destination</strong></label>
               <p class="option-caption price-changing" id="prices-from">Prices from 1940€</p>
-        <select class="select-type-one form-control" id="destination-select" onchange="myFunction()">
+        <select class="select-type-one form-control" id="destination-selection" onchange="myFunction()">
           <option value="1940">Amsterdam</option>
           <option value="2340">Bad Gastein</option>
           <option value="2040">Barcelona</option>
@@ -137,7 +137,7 @@
                   <div class="mbsc-form-group form-group">
                       <label for="dates-selection"><strong>Course dates and hours</strong></label>
                       <div>
-                          <select name="dates-selection" id="demo-inline" data-enhance="false">
+                          <select name="dates-selection" id="dates-selection" data-enhance="false">
                               <optgroup label="2019">
                                   <option disabled>07 Oct - 01 Nov (9:00 - 15:00)</option>
                                   <option>04 Nov - 29 Nov (9:00 - 15:00)</option>
@@ -198,10 +198,10 @@
                       <div class="inner">
 
                               <div class="form-group">
-                                  <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" placeholder="Enter Your Name"> 
+                                  <input type="text" class="form-control" id="Name" placeholder="Enter Your Name"> 
                               </div>
                               <div class="form-group">
-                                  <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email"> 
+                                  <input type="email" class="form-control" id="Email" placeholder="Enter email"> 
                               </div>
                               <div class="input-group">
                                   <div class="input-group-prepend">
@@ -535,7 +535,7 @@
         });
     
         // Mobiscroll Select initialization
-        $('#demo-inline').mobiscroll().select({
+        $('#dates-selection').mobiscroll().select({
             display: 'inline',  // Specify display mode like: display: 'bottom' or omit setting to use default
             showInput: false    // More info about showInput: https://docs.mobiscroll.com/4-8-3/select#opt-showInput
         });
@@ -563,7 +563,7 @@
       var destination = e.options[e.selectedIndex].text;
       sessionStorage.setItem("next-destination", destination);
       
-      var f = document.getElementById("demo-inline");
+      var f = document.getElementById("dates-selection");
       var destination = f.options[f.selectedIndex].text;
       sessionStorage.setItem("next-date", destination);
     }

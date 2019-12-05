@@ -1020,6 +1020,10 @@ MOBI SELECTOR
 /******  SIXTH AND SEVENTH STEP ******/
 #recap-page .confirmation-sidebar .fa-check {
   color: green; }
+#recap-page .confirmation-sidebar .payment-confirmed {
+  color: green;
+  padding: 5px;
+  background: white; }
 #recap-page section {
   margin-top: 1.5rem; }
   #recap-page section:first-child {
@@ -1036,7 +1040,7 @@ MOBI SELECTOR
   margin-top: 3rem;
   font-size: 1rem; }
 
-#login-form {
+#login-form, #register-form {
   margin-bottom: 2rem; }
 
 /******
