@@ -177,11 +177,14 @@ PILLS TAB
 /*******
 FORMS 
 ********/
+.form-group{
+    margin-bottom:1.25rem;
+}
 .form-control{
+    padding:1rem;
 	background-color:$bright-grey;
 	border:1px solid $less-bright-grey;
     font-size:1rem;
-    padding:1rem;
 	&.form-control-lg{
 		font-size:1rem;
 		padding:0.625rem;
