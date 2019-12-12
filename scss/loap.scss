@@ -571,6 +571,18 @@ MOBI SELECTOR
   background-color:#fdfdfd; 
   border:1px solid #dbdbdb;
   box-shadow:0px 2px 4px rgba(214,214,214,0.5);
+  .prices{
+    padding-top:1rem;
+  }
+  .with-collapse-link{
+    margin-bottom:0.75rem;
+  }
+  .collapse-paragraph{
+    padding:0.25rem 0;
+    margin-bottom:0;
+    border-top:1px solid $less-bright-grey;
+    font-size:0.875rem;
+  }
   .button{
     padding-bottom:0.875rem;
     padding-top:0.875rem;
@@ -579,6 +591,9 @@ MOBI SELECTOR
   }
 }
 
+
+
+
 @media (min-width: 992px) {
   .payment-method{
     .button{
@@ -586,8 +601,6 @@ MOBI SELECTOR
     }
   }
 } 
-
-
 
 
 /******  FIFTH STEP - LOGIN/REGISTER  ******/

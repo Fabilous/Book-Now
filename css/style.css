@@ -63,6 +63,27 @@ a {
     }
 }
 */
+.main-content p .underlined, .main-content ul .underlined {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  color: #373636; }
+  .main-content p .underlined::after, .main-content ul .underlined::after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #373636;
+    content: '';
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px); }
+  .main-content p .underlined:hover::after, .main-content p .underlined:focus::after, .main-content ul .underlined:hover::after, .main-content ul .underlined:focus::after {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px); }
 .main-content p a, .main-content ul a {
   position: relative;
   display: inline-block;
@@ -988,6 +1009,15 @@ MOBI SELECTOR
   background-color: #fdfdfd;
   border: 1px solid #dbdbdb;
   box-shadow: 0px 2px 4px rgba(214, 214, 214, 0.5); }
+  .payment-method .prices {
+    padding-top: 1rem; }
+  .payment-method .with-collapse-link {
+    margin-bottom: 0.75rem; }
+  .payment-method .collapse-paragraph {
+    padding: 0.25rem 0;
+    margin-bottom: 0;
+    border-top: 1px solid #D0D0D0;
+    font-size: 0.875rem; }
   .payment-method .button {
     padding-bottom: 0.875rem;
     padding-top: 0.875rem;
