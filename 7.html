@@ -148,9 +148,19 @@
                 <p>Booking confirmed</p>
             </section>
 
-                <a href="#" class="button red-empty">Go to your student account</a>
+            <div class="button-box no-print">
+                <a href="#" class="button blue-full btn-print"><span class="button__icon"><i class="fa fa-print" aria-hidden="true"></i></span> Print this page as a reminder</a> 
+                <a href="#" class="button red-full"><span class="button__icon"><i class="fa fa-user" aria-hidden="true"></i></span> Go to your student account</a>
+            </div>
 
-
+            <script>
+              (function( w, d ) {
+                 'use strict'; 
+              
+                 d.querySelector( '.btn-print' ).addEventListener( 'click', function() { w.print(); }, false );
+              
+              }( window, document ));
+              </script>
 
         </div>
 
@@ -246,29 +256,6 @@
     </footer>
 
 
-   <!-- CALL US -->
-  <div id="bottom-fixed">
-    <div class="container" id="bottom-ctas">
-      <div class="row">
-        <div class="col-6">
-  
-            <a class="text-center button green" href="" id="call-us">   
-          <i class="fas fa-phone"></i>&nbsp; Call us        
-            </a>
-  
-        </div>
-  
-        <div class="col-6">
-  
-            <a class="text-center button green-empty" href="" id="chat-with-us">   
-                <i class="fa fa-envelope"></i>&nbsp; Write us        
-            </a>
-  
-        </div>
-  
-      </div>
-    </div>
-  </div>
 
 
   <!-- MODALS -->

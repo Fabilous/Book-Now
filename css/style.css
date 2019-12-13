@@ -24,6 +24,9 @@ strong {
   .no-mobile-padding {
     padding-left: 0;
     padding-right: 0; } }
+@media print {
+  .no-print, .no-print * {
+    display: none !important; } }
 /*******
 LINKS
 ********/
@@ -510,7 +513,9 @@ MODALS
     background: transparent;
     color: #E24444;
     border: 2px solid #E24444;
-    box-shadow: none; }
+    box-shadow: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem; }
     .button.red-empty:hover, .button.red-empty:active, .button.red-empty:focus {
       background: #E24444;
       color: white;
@@ -1083,9 +1088,16 @@ MOBI SELECTOR
   font-weight: bold; }
 #recap-page ul.checklist li {
   margin-bottom: 0.5rem; }
-#recap-page .button.red-empty {
-  margin-top: 3rem;
-  font-size: 1rem; }
+#recap-page .button-box {
+  margin-top: 2rem; }
+  #recap-page .button-box .button.red-full, #recap-page .button-box .button.blue-full {
+    margin-top: 1rem;
+    font-size: 1rem; }
+    #recap-page .button-box .button.red-full .button__icon, #recap-page .button-box .button.blue-full .button__icon {
+      width: auto;
+      float: none;
+      clear: left;
+      margin-right: 15px; }
 
 #login-form, #register-form {
   margin-bottom: 2rem; }

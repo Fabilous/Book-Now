@@ -705,10 +705,21 @@ MOBI SELECTOR
       margin-bottom:0.5rem;
     }
   }
-  .button.red-empty{
-    margin-top:3rem;
-    font-size:1rem;
+  .button-box{
+    margin-top:2rem;
+    .button.red-full,.button.blue-full{
+      margin-top:1rem;
+      font-size:1rem;
+      .button__icon{
+        width:auto;
+        float:none;
+        clear:left;
+        margin-right:15px;
+
+      }
+    }
   }
+
 }
 
 #login-form,#register-form{
