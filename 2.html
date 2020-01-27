@@ -85,10 +85,9 @@
 <form>
   <div class="row no-gutters two-selectors">
 
-    <div class="col-6">
+    <div class="col-12 col-sm-6">
       <div class="form-group">
           <label for="language-selection"><strong>Course language</strong></label>
-          <p class="option-caption">Preferred language</p>
           <select class="select-type-one form-control" name="language-selection" style="width:100%" id="language-selection">
             <option value="1">English</option>
             <option value="2">Danish</option>
@@ -102,10 +101,9 @@
         </div>
       </div>
 
-  <div class="col-6">
+  <div class="col-12 col-sm-6">
       <div class="form-group from-group-destination">
-              <label for="destination-selection"><strong>Destination</strong></label>
-              <p class="option-caption price-changing" id="prices-from">Prices from 1940€</p>
+              <label for="destination-selection"><strong>Amsterdam prices from 1940€</strong></label>
         <select class="select-type-one form-control" id="destination-selection" onchange="myFunction()">
           <option value="1940">Amsterdam</option>
           <option value="2340">Bad Gastein</option>
@@ -138,7 +136,7 @@
 
 
                   <div class="mbsc-form-group form-group">
-                      <label for="dates-selection"><strong>Course dates and hours</strong></label>
+                      <label for="dates-selection"><strong>Course dates</strong></label>
                       <div>
                           <select name="dates-selection" id="dates-selection" data-enhance="false">
                               <optgroup label="2019">
@@ -176,11 +174,18 @@
                     <div class="col-12">  
 
                       <div  id="presenting-installments">
+
+                        <div class="row">
+
+                          <div class="col-12">
+                              <span class="explanation">You can pay in 3 installments with no extra charges.</span>
+                          </div>
+
+                        </div>
                     
                         <div class="row">
                           <div class="col-8">
-                            <span class="label">Price of first installment</span>
-                            <span class="explanation">You can pay in 3 installments with no extra charges.</span>
+                            <span class="label">Price of first installment</span>                           
                           </div>
                           <div class="col-4 text-right">
                             <span class="price" id="installment-price">485€</span>
@@ -488,7 +493,6 @@
 
     function myFunction() {
       var x = document.getElementById("destination-select").value;
-      document.getElementById("prices-from").innerHTML = "Prices from " + x + "€";
       document.getElementById("main-price").innerHTML = x + "€";
       document.getElementById("installment-price").innerHTML = x / 4 + "€";
       sessionStorage.setItem("price", x);
