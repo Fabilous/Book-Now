@@ -13,6 +13,9 @@
 body {
   color: #373636; }
 
+html {
+  scroll-behavior: smooth; }
+
 .container {
   padding-right: 1.5rem;
   padding-left: 1.5rem; }
@@ -88,29 +91,15 @@ a {
     -moz-transform: translateY(0px);
     transform: translateY(0px); }
 .main-content p a, .main-content ul a {
-  position: relative;
-  display: inline-block;
-  padding: 0; }
-  .main-content p a::after, .main-content ul a::after {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    width: 100%;
-    height: 1.5px;
-    background: #dd2727;
-    content: '';
-    opacity: 0;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-    -webkit-transform: translateY(2px);
-    -moz-transform: translateY(2px);
-    transform: translateY(2px); }
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease; }
   .main-content p a:hover::after, .main-content p a:focus::after, .main-content ul a:hover::after, .main-content ul a:focus::after {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    transform: translateY(0px); }
+    color: #dd2727;
+    border-bottom: 2px solid #dd2727; }
 
 /*******
 SHADOWS
@@ -1220,5 +1209,153 @@ SWITCHES
       margin-left: calc(3rem * .8); }
   .switch + .switch {
     margin-left: 1rem; }
+
+body.student-account {
+  /* forms generals for student account*/ }
+  @media (max-width: 768px) {
+    body.student-account .student-account-nav {
+      margin-top: 0.5rem; } }
+  body.student-account .content-nav a {
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -ms-transform: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    padding: .3rem 0.875rem .35rem;
+    font-size: .875rem;
+    background-color: #f7f7f7;
+    border-radius: 8px; }
+    body.student-account .content-nav a:hover {
+      background-color: #063456;
+      color: white; }
+  body.student-account h2 {
+    font-size: 2rem;
+    line-height: 2rem; }
+  body.student-account .button {
+    font-size: 1.125rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem; }
+    body.student-account .button.review {
+      padding-left: 2rem;
+      padding-right: 2rem; }
+  body.student-account .sa-box {
+    padding: 1.25rem;
+    padding-top: 1.875rem;
+    margin-bottom: 1.25rem;
+    background-color: #fdfdfd;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 2px 4px rgba(214, 214, 214, 0.5); }
+    body.student-account .sa-box h3 {
+      margin-bottom: 1.5rem; }
+    body.student-account .sa-box .button {
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    body.student-account .sa-box .sa-info {
+      margin-right: 0;
+      margin-left: 0; }
+      body.student-account .sa-box .sa-info .inner {
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem; }
+        body.student-account .sa-box .sa-info .inner .col-6, body.student-account .sa-box .sa-info .inner .col {
+          padding-bottom: 0.5rem;
+          margin-bottom: 0.5rem;
+          padding-left: 0;
+          border-bottom: 1px solid #e6e6e6; }
+          body.student-account .sa-box .sa-info .inner .col-6.no-border, body.student-account .sa-box .sa-info .inner .col.no-border {
+            border-bottom: none; }
+      body.student-account .sa-box .sa-info span {
+        display: block; }
+      body.student-account .sa-box .sa-info.sa-info-completed span {
+        line-height: 1.75; }
+      body.student-account .sa-box .sa-info.sa-info-completed a {
+        color: #373636;
+        text-decoration: underline; }
+        body.student-account .sa-box .sa-info.sa-info-completed a.button {
+          text-decoration: none; }
+          body.student-account .sa-box .sa-info.sa-info-completed a.button.blue-empty:hover {
+            color: white; }
+      body.student-account .sa-box .sa-info .payment-info span {
+        line-height: 1.75; }
+      body.student-account .sa-box .sa-info .payment-due-soon .fa {
+        color: #E24444; }
+      body.student-account .sa-box .sa-info.price-details .detail {
+        padding-left: 15px; }
+      body.student-account .sa-box .sa-info.price-details span {
+        line-height: 1.75; }
+      body.student-account .sa-box .sa-info.price-details .details-trigger {
+        margin-left: 0.5rem;
+        margin-top: 0.25rem;
+        color: #373636; }
+        body.student-account .sa-box .sa-info.price-details .details-trigger.collapsed .fa {
+          -webkit-transition: all .25s ease;
+          -moz-transition: all .25s ease;
+          -o-transition: all .25s ease;
+          -ms-transform: all .25s ease;
+          transition: all .25s ease;
+          transform: rotate(180deg); }
+      body.student-account .sa-box .sa-info .group-booking-code {
+        letter-spacing: 2px;
+        font-weight: 900;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #989898; }
+    body.student-account .sa-box .form-check-input {
+      margin-left: 0;
+      margin-right: 1rem;
+      margin-top: 0.45rem; }
+    body.student-account .sa-box .form-check-label {
+      padding-left: 1.5rem; }
+  body.student-account .content-with-nav h3 {
+    padding-top: 1rem; }
+  body.student-account .alert a {
+    color: #373636;
+    text-decoration: underline; }
+  body.student-account .faq-accordion .card {
+    border: 1px solid #D0D0D0;
+    margin-bottom: 1rem; }
+  body.student-account .faq-accordion .card-header {
+    background-color: #f7f7f7;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+  body.student-account .faq-accordion button {
+    width: 100%;
+    white-space: normal;
+    position: relative;
+    text-align: left;
+    padding-left: 0; }
+    body.student-account .faq-accordion button:focus, body.student-account .faq-accordion button:hover {
+      text-decoration: none; }
+    body.student-account .faq-accordion button .text {
+      padding-right: 40px;
+      color: #373636;
+      font-weight: 600; }
+    body.student-account .faq-accordion button .fa {
+      position: absolute;
+      width: 16px;
+      right: 0;
+      top: 26%;
+      color: #E24444; }
+  body.student-account form .form-group {
+    margin-bottom: 1.5rem; }
+  body.student-account form .form-control {
+    padding: 0.5rem; }
+  body.student-account form .form-check-input {
+    margin-left: 0;
+    margin-right: 1rem;
+    margin-top: 0.45rem; }
+  body.student-account form label {
+    font-weight: 600; }
+  body.student-account form .radio label {
+    font-weight: 400; }
+  body.student-account form p {
+    margin-bottom: 0.5rem; }
+  body.student-account form .custom-select#Prefix {
+    height: 38px !important; }
+  body.student-account form .select2-container {
+    height: 38px; }
+  body.student-account form .select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 38px; }
+  body.student-account form .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    top: 40%; }
 
 /*# sourceMappingURL=style.css.map */
